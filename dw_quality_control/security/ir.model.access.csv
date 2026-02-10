@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_quality.check.product.model,dw_quality_check_product_model,model_dw_quality_check_product_model,base.group_user,1,1,1,1
+access_quality.check.model,dw.quality.check.model,model_dw_quality_check_model,base.group_user,1,1,1,1
+access_quality.check.line,dw.quality.check.line,model_dw_quality_check_line,base.group_user,1,1,1,1
+access_quality_sample_request,quality_sample_request,model_quality_sample_request,base.group_user,1,1,1,1
+access_quality_sample_request_lines,quality_sample_request_lines,model_quality_sample_request_lines,base.group_user,1,1,1,1
+access_dw_analyse_report,dw_analyse_report,model_dw_analyse_report,base.group_user,1,1,1,1
+access_dw_quality_sampling,dw_quality_sampling,model_dw_quality_sampling,base.group_user,1,1,1,1
+access_dw_analyse_norm,dw_analyse_norm,model_dw_analyse_norm,base.group_user,1,1,1,1
+access_dw_analyse_methode,dw_analyse_methode,model_dw_analyse_methode,base.group_user,1,1,1,1
+access_dw_analyse_test,dw_analyse_test,model_dw_analyse_test,base.group_user,1,1,1,1
+access_dw_quality_sampling_line,dw_quality_sampling_line,model_dw_quality_sampling_line,base.group_user,1,1,1,1
+access_dw_analyse_norm_type,dw_analyse_norm_type,model_dw_analyse_norm_type,base.group_user,1,1,1,

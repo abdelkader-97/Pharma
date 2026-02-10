@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="dw_additional_consumption_wizard_form" model="ir.ui.view">
+        <field name="name">dw.additional.consumption.form</field>
+        <field name="model">dw.additional.consumption</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>
+                        <field name="production_id" readonly="1"/>
+                    </h1>
+                    <!--                    <group>-->
+                    <field name="line_ids" nolabel="1">
+                        <list string="Contacts" editable="bottom" create="false" delete="false">
+                            <field name="product_id" readonly="1" force_save="1"/>
+                            <field name="product_uom_qty" readonly="0"/>
+                            <field name="product_uom" readonly="1" force_save="1"/>
+                        </list>
+                    </field>
+                    <!--                    </group>-->
+                    <footer>
+                        <button name="action_submit" string="Reload" class="oe_highlight" type="object"
+                                invisible="not line_ids"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,5 @@
+from . import stock_warehouse
+from . import stock_picking
+from . import stock_picking_type
+from . import stock_lot
+from . import mrp_production

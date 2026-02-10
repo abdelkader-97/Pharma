@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="seq_sampling" model="ir.sequence">
+            <field name="name">Sampling</field>
+            <field name="code">dw.quality.sampling.seq</field>
+            <field name="prefix">TS</field>
+            <field name="padding">4</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_request_user,product.request,model_product_request,base.group_user,1,1,1,1
+access_product_request_line_user,product.request.line,model_product_request_line,base.group_user,1,1,1,1
+
+access_dw_additional_consumption,dw_additional_consumption,model_dw_additional_consumption,base.group_user,1,1,1,1
+access_consumption_line,consumption_line,model_consumption_line,base.group_user,1,1,1,1

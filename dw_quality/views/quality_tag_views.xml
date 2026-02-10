@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="quality_tag_view_tree" model="ir.ui.view">
+        <field name="name">quality.tag.view.list</field>
+        <field name="model">dw.quality.tag</field>
+        <field name="arch" type="xml">
+            <list string="Tags" editable="bottom">
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+    <record id="quality_tag_action" model="ir.actions.act_window">
+        <field name="name">Quality Tags</field>
+        <field name="res_model">dw.quality.tag</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new tag
+            </p>
+        </field>
+    </record>
+</odoo>

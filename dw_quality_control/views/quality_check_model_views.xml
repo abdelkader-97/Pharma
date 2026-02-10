@@ -1,0 +1,57 @@
+<odoo>
+
+    <record id="quality_check_product_model_form_view" model="ir.ui.view">
+        <field name="name">quality.check.product.model.form</field>
+        <field name="model">dw.quality.check.product.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="product_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Model">
+                            <field name="model_ids">
+                                <list editable="bottom">
+                                    <field name="name"/>
+                                    <field name="reference"/>
+                                    <field name="standards"/>
+                                    <field name="result"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="quality_check_product_model_tree_view" model="ir.ui.view">
+        <field name="name">quality.check.product.model.tree</field>
+        <field name="model">dw.quality.check.product.model</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="product_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_quality_check_product_model" model="ir.actions.act_window">
+        <field name="name">Quality Check product Model</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">dw.quality.check.product.model</field>
+    </record>
+
+    <menuitem
+            id="menu_quality_config_quality_check_product_model"
+            name="Quality Check Product Model"
+            action="action_quality_check_product_model"
+            parent="dw_quality.menu_quality_configuration"
+            sequence="30"/>
+
+</odoo>

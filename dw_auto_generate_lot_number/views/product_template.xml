@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_auto_lot_generate_form" model="ir.ui.view">
+        <field name="name">product.product.form.inherit.lot.auto.generate</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_general']/div" position="after">
+                <field name="auto_generate_lot_number" invisible="tracking != 'lot'"/>
+                <field name="lot_code" invisible="not auto_generate_lot_number  "/>
+                <field name="sequence_size" invisible="not auto_generate_lot_number "/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

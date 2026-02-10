@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="owl.YearPicker" owl="1">
+        <link rel="stylesheet" type="text/css" href="shared_assets/static/libs/css/bootstrap-datepicker.css"/>
+        <style>
+            .ui-datepicker-calendar {
+                display: none;
+                }
+        </style>
+            <t t-if="props.readonly">
+                <span t-esc="formattedValue" />
+            </t>
+            <t t-else="">
+                <input
+                    class="o_input date-own"
+                    t-att-class="{'o_field_translate': isTranslatable}"
+                    t-att-id="props.id"
+                    t-att-type="props.isPassword ? 'password' : 'text'"
+                    autocomplete="off"
+                    t-att-maxlength="maxLength > 0 and maxLength"
+                    t-att-placeholder="props.placeholder"
+                    t-ref="input"
+                    type="text"
+                    id="input"
+                />
+                <t t-if="isTranslatable">
+                    <TranslationButton
+                        fieldName="props.name"
+                        record="props.record"
+                    />
+                </t>
+            </t>
+    </t>
+</templates>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+            id="menu_quality_root"
+            name="Quality"
+            sequence="150"
+    />
+
+    <menuitem
+            id="menu_quality_control"
+            name="Quality Control"
+            parent="menu_quality_root"
+            sequence="15"/>
+    <menuitem
+            id="menu_quality_control_points"
+            name="Control Points"
+            parent="menu_quality_control"
+            action="quality_point_action"
+            sequence="17"/>
+    <menuitem
+            id="menu_quality_checks"
+            name="Quality Checks"
+            action="quality_check_action_main"
+            parent="menu_quality_control"
+            sequence="18"/>
+    <menuitem
+            id="menu_quality_alert"
+            name="Quality Alerts"
+            action="quality_alert_action_check"
+            parent="menu_quality_control"
+            sequence="20"/>
+
+    <menuitem
+            id="menu_quality_configuration"
+            name="Configuration"
+            parent="menu_quality_root"
+            sequence="25"/>
+    <menuitem
+            id="menu_quality_config_alert_team"
+            name="Quality Teams"
+            action="quality_alert_team_action_config"
+            parent="menu_quality_configuration"
+            sequence="5"/>
+    <menuitem
+            id="menu_quality_config_alert_stage"
+            name="Quality Alert Stages"
+            action="quality_alert_stage_action"
+            parent="menu_quality_configuration"
+            sequence="15"/>
+    <menuitem
+            id="menu_config_quality_tags"
+            name="Quality Tags"
+            action="quality_tag_action"
+            parent="menu_quality_configuration"
+            sequence="25"/>
+
+    <menuitem
+            id="quality_control_menu_product"
+            name="Products"
+            parent="dw_quality.menu_quality_root"
+            sequence="18"/>
+
+    <menuitem
+            id="quality_product_menu_product_template"
+            name="Products"
+            action="stock.product_template_action_product"
+            parent="quality_control_menu_product"
+            sequence="5"/>
+
+    <menuitem
+            id="quality_control_menu_product_variant"
+            name="Product Variants"
+            action="product.product_normal_action"
+            parent="quality_control_menu_product"
+            sequence="10"/>
+
+    <menuitem
+            id="quality_control_menu_traceability"
+            name="Lots/Serial Numbers"
+            action="stock.action_production_lot_form"
+            parent="quality_control_menu_product"
+            sequence="15"/>
+</odoo>

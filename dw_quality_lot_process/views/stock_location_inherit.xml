@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="stock_location_form">
+            <field name="name">stock.location.form</field>
+            <field name="model">stock.location</field>
+            <field name="inherit_id" ref="dw_location_transfer_limit.stock_location_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='additional_info']//field[@name='perform_transfer']" position="after">
+                    <field name="perform_transfer" invisible="1"/>
+                    <field name="must_check_lot_compliance" invisible="perform_transfer"/>
+                   <field name="perform_quality_lot_reanalyze" invisible="perform_transfer"/>
+                    <field name="allowed_lot_status_in" widget="many2many_tags"
+                           invisible="must_check_lot_compliance==False"/>
+                  <field name="allowed_lot_status_out" widget="many2many_tags"
+                           invisible="not must_check_lot_compliance"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

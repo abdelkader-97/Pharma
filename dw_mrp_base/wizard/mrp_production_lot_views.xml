@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="mrp_production_lot_wizard_form" model="ir.ui.view">
+        <field name="name">mrp.production.lot.form</field>
+        <field name="model">mrp.production.lot</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>
+                        <field name="lot_id" readonly="1"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="expiration_date"/>
+                            <field name="use_date"/>
+                        </group>
+                        <group>
+                            <field name="removal_date"/>
+                            <field name="date_alert"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_submit" string="Submit" class="oe_highlight" type="object"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

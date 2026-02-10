@@ -1,0 +1,12 @@
+<odoo>
+    <record id="group_bom_mo_manager" model="res.groups">
+        <field name="name"> BOM and MO Manager</field>
+        <field name="category_id" ref="base.module_category_manufacturing"/>
+        <field name="implied_ids" eval="[(4, ref('mrp.group_mrp_manager'))]"/>
+        <field name="comment">
+            This group is for users who need advanced permissions in the manufacturing module.
+            Assigning this group automatically grants access to the "MRP Manager" permission.
+            The group can modify on Components MO and update BOM of MO.
+        </field>
+    </record>
+</odoo>

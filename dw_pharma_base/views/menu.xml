@@ -1,0 +1,50 @@
+<odoo>
+    <menuitem id="menu_product_config_product_pharma" name="Products pharma" parent="stock.menu_stock_root"
+              sequence="80"/>
+
+    <menuitem id="menu_product_pharmaceutical_dosage" parent="menu_product_config_product_pharma"
+              action="dw_pharma_base.action_product_pharmaceutical_dosage"
+              sequence="50"/>
+
+    <menuitem id="menu_product_pharmaceutical_class_menu" parent="menu_product_config_product_pharma"
+              sequence="50" name="Class"/>
+    <menuitem id="menu_product_pharmaceutical_class" parent="menu_product_pharmaceutical_class_menu"
+              action="dw_pharma_base.action_product_pharmaceutical_class"
+              sequence="50"/>
+
+    <menuitem id="menu_product_pharmaceutical_subclass" parent="menu_product_pharmaceutical_class_menu"
+              action="dw_pharma_base.action_product_pharmaceutical_subclass"
+              sequence="50"/>
+
+    <menuitem id="menu_product_pharmaceutical_family_menu" parent="menu_product_config_product_pharma"
+              name="Family"
+              sequence="50"/>
+    <menuitem id="menu_product_pharmaceutical_family" parent="menu_product_pharmaceutical_family_menu"
+              action="dw_pharma_base.action_product_pharmaceutical_family"
+              sequence="50"/>
+    <menuitem id="menu_product_pharmaceutical_subfamily" parent="menu_product_pharmaceutical_family_menu"
+              action="dw_pharma_base.action_product_pharmaceutical_subfamily"
+              sequence="60"/>
+
+    <menuitem id="menu_product_pharmaceutical_form_menu" parent="menu_product_config_product_pharma"
+              name="Form"
+              sequence="50"/>
+    <menuitem id="menu_product_pharmaceutical_form" parent="menu_product_pharmaceutical_form_menu"
+              action="dw_pharma_base.action_product_pharmaceutical_form"
+              sequence="50"/>
+    <menuitem id="menu_product_pharmaceutical_subform" parent="menu_product_pharmaceutical_form_menu"
+              action="dw_pharma_base.action_product_pharmaceutical_subform"
+              sequence="50"/>
+
+    <menuitem id="menu_product_pharmaceutical_network" parent="menu_product_config_product_pharma"
+              action="dw_pharma_base.action_product_pharmaceutical_network"
+              sequence="50"/>
+
+    <menuitem id="menu_product_pharmaceutical_pf_dest" parent="menu_product_config_product_pharma"
+              action="dw_pharma_base.action_product_pharmaceutical_pf_dest"
+              sequence="50"/>
+
+    <menuitem id="menu_product_pharmaceutical_speciality" parent="menu_product_config_product_pharma"
+              action="dw_pharma_base.action_product_pharmaceutical_speciality"
+              sequence="55"/>
+</odoo>

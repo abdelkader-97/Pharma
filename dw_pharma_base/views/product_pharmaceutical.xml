@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_pharma_pf_dest_view_tree" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.pf.dest.tree</field>
+        <field name="model">product.pharmaceutical.pf.dest</field>
+        <field name="arch" type="xml">
+            <list string="PF Destination" editable="top">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_product_pharmaceutical_pf_dest" model="ir.actions.act_window">
+        <field name="name">PF destination</field>
+        <field name="res_model">product.pharmaceutical.pf.dest</field>
+        <field name="view_mode">list</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No destination found. Let's create one!
+            </p>
+        </field>
+    </record>
+    <record id="product_pharma_network_view_tree" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.network.tree</field>
+        <field name="model">product.pharmaceutical.network</field>
+        <field name="arch" type="xml">
+            <list string="Network" editable="top">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_product_pharmaceutical_network" model="ir.actions.act_window">
+        <field name="name">Products network</field>
+        <field name="res_model">product.pharmaceutical.network</field>
+        <field name="view_mode">list</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No network found. Let's create one!
+            </p>
+        </field>
+    </record>
+    <record id="product_pharma_form_view_form" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.form.form</field>
+        <field name="model">product.pharmaceutical.form</field>
+        <field name="arch" type="xml">
+            <form string="Form">
+                <div class="oe_title">
+                    <div>
+                        <label for="name"/>
+                    </div>
+                    <h1 class="mb32">
+                        <field name="name" placeholder="e.g. Form .." class="mb16"/>
+                    </h1>
+                </div>
+                <group>
+                    <field name="code"/>
+                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                    <field name="active" invisible="1"/>
+                </group>
+                <notebook>
+                    <page string="SubForm">
+                        <field name="subform_ids" nolabel="1">
+                            <list editable="bottom">
+                                <field name="name"/>
+                                <field name="code"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="product_pharma_form_view_tree" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.form.tree</field>
+        <field name="model">product.pharmaceutical.form</field>
+        <field name="arch" type="xml">
+            <list string="Form">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_product_pharmaceutical_form" model="ir.actions.act_window">
+        <field name="name">Products form</field>
+        <field name="res_model">product.pharmaceutical.form</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No form found. Let's create one!
+            </p>
+        </field>
+    </record>
+    <record id="product_pharma_subform_view_tree" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.subform.tree</field>
+        <field name="model">product.pharmaceutical.subform</field>
+        <field name="arch" type="xml">
+            <list string="Form">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_product_pharmaceutical_subform" model="ir.actions.act_window">
+        <field name="name">Products Subform</field>
+        <field name="res_model">product.pharmaceutical.subform</field>
+        <field name="view_mode">list</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No form found. Let's create one!
+            </p>
+        </field>
+    </record>
+    <record id="product_pharma_subfamily_view_tree" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.subfamily.tree</field>
+        <field name="model">product.pharmaceutical.subfamily</field>
+        <field name="arch" type="xml">
+            <list string="Family">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_product_pharmaceutical_subfamily" model="ir.actions.act_window">
+        <field name="name">Products Subfamily</field>
+        <field name="res_model">product.pharmaceutical.subfamily</field>
+        <field name="view_mode">list</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No family found. Let's create one!
+            </p>
+        </field>
+    </record>
+    <record id="product_pharma_family_view_form" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.family.form</field>
+        <field name="model">product.pharmaceutical.family</field>
+        <field name="arch" type="xml">
+            <form string="Family">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object" string="Products" name="action_view_product" class="oe_stat_button"
+                                icon="fa-tags">
+                            <field name="product_count" widget="statinfo" string="Produits"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <div>
+                            <label for="name"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="name" placeholder="e.g. Family .." class="mb16"/>
+                        </h1>
+                        <group>
+                            <field name="active" invisible="1"/>
+                            <field name="company_id" groups="base.group_multi_company"
+                                   options="{'no_create': True}"/>
+                        </group>
+
+                    </div>
+                    <notebook>
+                        <page string="SubFamily">
+                            <field name="subfamily_ids" nolabel="1">
+                                <list editable="bottom">
+                                    <field name="name"/>
+                                    <field name="code"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Configuration">
+                            <group>
+                                <field name="purchase_ok"/>
+                                <field name="sale_ok"/>
+                                <field name="product_categ_id" options="{'no_create': True}"/>
+                                <field name="product_detailed_type"/>
+                                <field name="is_storable" invisible="product_detailed_type != 'consu'"/>
+                                <field name="tracking" invisible="not is_storable"/>
+                                <field name="use_expiration_date"/>
+                            </group>
+                        </page>
+                    </notebook>
+                    <chatter/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="product_pharma_family_view_tree" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.family.tree</field>
+        <field name="model">product.pharmaceutical.family</field>
+        <field name="arch" type="xml">
+            <list string="Family">
+                <field name="name"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_product_pharmaceutical_family" model="ir.actions.act_window">
+        <field name="name">Products family</field>
+        <field name="res_model">product.pharmaceutical.family</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No family found. Let's create one!
+            </p>
+        </field>
+    </record>
+    <record id="product_pharma_subclass_view_tree" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.subclass.tree</field>
+        <field name="model">product.pharmaceutical.subclass</field>
+        <field name="arch" type="xml">
+            <list string="SubClass" editable="top">
+                <field name="name"/>
+                <field name="class_id"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_product_pharmaceutical_subclass" model="ir.actions.act_window">
+        <field name="name">Products Subclass</field>
+        <field name="res_model">product.pharmaceutical.subclass</field>
+        <field name="view_mode">list</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No subclass found. Let's create one!
+            </p>
+        </field>
+    </record>
+    <record id="product_pharma_class_view_form" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.class.form</field>
+        <field name="model">product.pharmaceutical.class</field>
+        <field name="arch" type="xml">
+            <form string="Class">
+                <div class="oe_title">
+                    <div>
+                        <label for="name"/>
+                    </div>
+                    <h1 class="mb32">
+                        <field name="name" placeholder="e.g. Class .." class="mb16"/>
+                    </h1>
+                    <field name="code"/>
+                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                    <field name="active" invisible="1"/>
+                </div>
+                <notebook>
+                    <page string="SubClass">
+                        <field name="subclass_ids" nolabel="1">
+                            <list editable="bottom">
+                                <field name="name"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="product_pharma_class_view_tree" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.class.tree</field>
+        <field name="model">product.pharmaceutical.class</field>
+        <field name="arch" type="xml">
+            <list string="Class">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_product_pharmaceutical_class" model="ir.actions.act_window">
+        <field name="name">Products class</field>
+        <field name="res_model">product.pharmaceutical.class</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No class found. Let's create one!
+            </p>
+        </field>
+    </record>
+    <record id="product_pharma_dosage_view_tree" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.dosage.tree</field>
+        <field name="model">product.pharmaceutical.dosage</field>
+        <field name="arch" type="xml">
+            <list string="Dosage" editable="top">
+                <field name="name"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_product_pharmaceutical_dosage" model="ir.actions.act_window">
+        <field name="name">Products dosage</field>
+        <field name="res_model">product.pharmaceutical.dosage</field>
+        <field name="view_mode">list</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No dosage found. Let's create one!
+            </p>
+        </field>
+    </record>
+    <record id="product_pharma_speciality_view_tree" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.speciality.tree</field>
+        <field name="model">product.pharmaceutical.speciality</field>
+        <field name="arch" type="xml">
+            <list string="Speciality" editable="top">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_product_pharmaceutical_speciality" model="ir.actions.act_window">
+        <field name="name">Products speciality</field>
+        <field name="res_model">product.pharmaceutical.speciality</field>
+        <field name="view_mode">list</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No speciality found. Let's create one!
+            </p>
+        </field>
+    </record>
+</odoo>

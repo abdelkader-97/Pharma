@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<!--    <data noupdate="1">-->
+<!--        <record id="product_pharmaceutical_dosage_company_rule" model="ir.rule">-->
+<!--            <field name="name">Product pharmaceutical dosage multi company rule</field>-->
+<!--            <field name="model_id" ref="model_product_pharmaceutical_dosage"/>-->
+<!--            <field eval="True" name="global"/>-->
+<!--            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>-->
+<!--        </record>-->
+<!--        <record id="product_pharmaceutical_family_company_rule" model="ir.rule">-->
+<!--            <field name="name">Product pharmaceutical family multi company rule</field>-->
+<!--            <field name="model_id" ref="model_product_pharmaceutical_family"/>-->
+<!--            <field eval="True" name="global"/>-->
+<!--            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>-->
+<!--        </record>-->
+<!--        <record id="product_pharmaceutical_subfamily_company_rule" model="ir.rule">-->
+<!--            <field name="name">Product pharmaceutical subfamily multi company rule</field>-->
+<!--            <field name="model_id" ref="model_product_pharmaceutical_subfamily"/>-->
+<!--            <field eval="True" name="global"/>-->
+<!--            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>-->
+<!--        </record>-->
+<!--        <record id="product_pharmaceutical_class_company_rule" model="ir.rule">-->
+<!--            <field name="name">Product pharmaceutical class multi company rule</field>-->
+<!--            <field name="model_id" ref="model_product_pharmaceutical_class"/>-->
+<!--            <field eval="True" name="global"/>-->
+<!--            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>-->
+<!--        </record>-->
+<!--        <record id="product_pharmaceutical_subclass_company_rule" model="ir.rule">-->
+<!--            <field name="name">Product pharmaceutical subclass multi company rule</field>-->
+<!--            <field name="model_id" ref="model_product_pharmaceutical_subclass"/>-->
+<!--            <field eval="True" name="global"/>-->
+<!--            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>-->
+<!--        </record>-->
+<!--        <record id="product_pharmaceutical_form_company_rule" model="ir.rule">-->
+<!--            <field name="name">Product pharmaceutical form multi company rule</field>-->
+<!--            <field name="model_id" ref="model_product_pharmaceutical_form"/>-->
+<!--            <field eval="True" name="global"/>-->
+<!--            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>-->
+<!--        </record>-->
+<!--        <record id="product_pharmaceutical_subform_company_rule" model="ir.rule">-->
+<!--            <field name="name">Product pharmaceutical subform multi company rule</field>-->
+<!--            <field name="model_id" ref="model_product_pharmaceutical_subform"/>-->
+<!--            <field eval="True" name="global"/>-->
+<!--            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>-->
+<!--        </record>-->
+<!--        <record id="product_pharmaceutical_network_company_rule" model="ir.rule">-->
+<!--            <field name="name">Product pharmaceutical network multi company rule</field>-->
+<!--            <field name="model_id" ref="model_product_pharmaceutical_network"/>-->
+<!--            <field eval="True" name="global"/>-->
+<!--            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>-->
+<!--        </record>-->
+<!--        <record id="product_pharmaceutical_pf_dest_company_rule" model="ir.rule">-->
+<!--            <field name="name">Product pharmaceutical pf dest multi company rule</field>-->
+<!--            <field name="model_id" ref="model_product_pharmaceutical_pf_dest"/>-->
+<!--            <field eval="True" name="global"/>-->
+<!--            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>-->
+<!--        </record>-->
+<!--        <record id="product_pharmaceutical_nature_company_rule" model="ir.rule">-->
+<!--            <field name="name">Product pharmaceutical nature multi company rule</field>-->
+<!--            <field name="model_id" ref="model_product_pharmaceutical_nature"/>-->
+<!--            <field eval="True" name="global"/>-->
+<!--            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>-->
+<!--        </record>-->
+<!--        <record id="product_pharmaceutical_speciality_company_rule" model="ir.rule">-->
+<!--            <field name="name">Product pharmaceutical speciality multi company rule</field>-->
+<!--            <field name="model_id" ref="model_product_pharmaceutical_speciality"/>-->
+<!--            <field eval="True" name="global"/>-->
+<!--            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>-->
+<!--        </record>-->
+<!--    </data>-->
+</odoo>

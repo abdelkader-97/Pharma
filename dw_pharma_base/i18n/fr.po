@@ -1,0 +1,922 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dw_pharma_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-12 09:01+0000\n"
+"PO-Revision-Date: 2025-02-12 09:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_family__product_detailed_type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+"Un produit stockable est un produit dont vous gérez le stock. L'application "
+"Inventaire doit être installée.Un produit consommable est un produit dont le"
+" stock n'est pas géré.Un service est un produit immatériel que vous "
+"fournissez."
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__message_needaction
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__message_needaction
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__message_needaction
+msgid "Action Needed"
+msgstr "action nécessaire"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__active
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_dosage__active
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__active
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__active
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_nature__active
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_network__active
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_pf_dest__active
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_speciality__active
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subclass__active
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subfamily__active
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subform__active
+msgid "Active"
+msgstr "actif"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__activity_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__activity_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__activity_ids
+msgid "Activities"
+msgstr "activités"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__activity_exception_decoration
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__activity_exception_decoration
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__activity_state
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__activity_state
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__activity_state
+msgid "Activity State"
+msgstr "Décoration d'exception d'activité"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__activity_type_icon
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__activity_type_icon
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icône de type d'activité"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_price_ppa
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_price_ppa
+msgid "Algerian public price"
+msgstr "Prix public algérien"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,help:dw_pharma_base.field_res_config_settings__module_dw_supplier_reference
+msgid "Allows you to enter the supplier's reference for lot on the reception."
+msgstr ""
+"Vous permet de saisir la référence du fournisseur pour le lot lors de la "
+"réception."
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__message_attachment_count
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__message_attachment_count
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: dw_pharma_base
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.res_config_settings_view_form
+msgid "Auto generate Lot number"
+msgstr "Génération automatique du numéro de lot"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__product_pharmaceutical_family__tracking__lot
+msgid "By Lots"
+msgstr "Par lots"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__product_pharmaceutical_family__tracking__serial
+msgid "By Unique Serial Number"
+msgstr "Par numéro de série unique"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__purchase_ok
+msgid "Can be Purchased"
+msgstr "Peut être acheté"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__sale_ok
+msgid "Can be Sold"
+msgstr "Peut être vendu"
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_product_pharmaceutical_class
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subclass__class_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_class_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_class_id
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_pharmaceutical_class_menu
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_class_view_form
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_class_view_tree
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_template_pharma_form_view
+msgid "Class"
+msgstr "Classe"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__code
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__code
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subfamily__code
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subform__code
+msgid "Code"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__company_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_dosage__company_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__company_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__company_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_nature__company_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_network__company_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_pf_dest__company_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_speciality__company_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subclass__company_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subfamily__company_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subform__company_id
+msgid "Company"
+msgstr "Site"
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: dw_pharma_base
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_family_view_form
+msgid "Configuration"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__product_pharmaceutical_family__product_detailed_type__consu
+msgid "Consumable"
+msgstr "Consommable"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__create_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_dosage__create_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__create_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__create_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_nature__create_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_network__create_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_pf_dest__create_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_speciality__create_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subclass__create_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subfamily__create_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subform__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__create_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_dosage__create_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__create_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__create_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_nature__create_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_network__create_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_pf_dest__create_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_speciality__create_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subclass__create_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subfamily__create_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subform__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_dci
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_dci
+msgid "DCI"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_date_de
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_date_de
+msgid "Date DE"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__product_template__dw_pharma_duration_unit__days
+msgid "Days"
+msgstr "Jours"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_nature__description
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_network__description
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_pf_dest__description
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_speciality__description
+msgid "Description"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__display_name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_dosage__display_name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__display_name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__display_name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_nature__display_name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_network__display_name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_pf_dest__display_name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_speciality__display_name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subclass__display_name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subfamily__display_name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subform__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__res_partner__dw_supplier_nature__distributeur
+msgid "Distributeur"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__res_partner__dw_supplier_nature__distributeur_exclusif
+msgid "Distributeur Exclusif"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_product_pharmaceutical_dosage
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_dosage_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_dosage_id
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_dosage_view_tree
+msgid "Dosage"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_duration
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_duration
+msgid "Duration"
+msgstr "Durée"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_duration_unit
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_duration_unit
+msgid "Duration Unit"
+msgstr "Unité de durée"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_family__tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr "Assurez la traçabilité d'un produit stockable dans votre entrepôt"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__res_partner__dw_supplier_nature__fabricant
+msgid "Fabricant"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_product_pharmaceutical_family
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subfamily__family_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_family_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_family_id
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_pharmaceutical_family_menu
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_family_view_form
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_family_view_tree
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_subfamily_view_tree
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_template_pharma_form_view
+msgid "Family"
+msgstr "Famille"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__message_follower_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__message_follower_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__message_partner_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__message_partner_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (Partenaires)"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_class__activity_type_icon
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_family__activity_type_icon
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_form__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_product_pharmaceutical_form
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subform__form_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_form_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_form_id
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_pharmaceutical_form_menu
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_form_view_form
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_form_view_tree
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_subform_view_tree
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_template_pharma_form_view
+msgid "Form"
+msgstr "Forme"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__has_message
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__has_message
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__has_message
+msgid "Has Message"
+msgstr "A un message"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_dosage__id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_nature__id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_network__id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_pf_dest__id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_speciality__id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subclass__id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subfamily__id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subform__id
+msgid "ID"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__activity_exception_icon
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__activity_exception_icon
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_class__activity_exception_icon
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_family__activity_exception_icon
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_form__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône pour indiquer une activité exceptionnelle"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_class__message_needaction
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_family__message_needaction
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_form__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, les nouveaux messages nécessitent votre attention"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_class__message_has_error
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_class__message_has_sms_error
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_family__message_has_error
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_family__message_has_sms_error
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_form__message_has_error
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_form__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si coché, certains messages ont une erreur de livraison"
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_res_partner
+msgid "Institute"
+msgstr "Contact"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__message_is_follower
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__message_is_follower
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__message_is_follower
+msgid "Is Follower"
+msgstr "Est abonné"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__write_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_dosage__write_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__write_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__write_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_nature__write_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_network__write_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_pf_dest__write_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_speciality__write_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subclass__write_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subfamily__write_uid
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subform__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__write_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_dosage__write_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__write_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__write_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_nature__write_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_network__write_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_pf_dest__write_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_speciality__write_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subclass__write_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subfamily__write_date
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subform__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_res_config_settings__module_dw_auto_generate_lot_number
+msgid "Lot Auto generate"
+msgstr "Génération automatique de lot"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__message_main_attachment_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__message_main_attachment_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Pièce jointe principale"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__message_has_error
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__message_has_error
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur de livraison du message"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__message_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__message_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__product_template__dw_pharma_duration_unit__months
+msgid "Months"
+msgstr "Mois"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__my_activity_date_deadline
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__my_activity_date_deadline
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "date limite de my d'activité"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_dosage__name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_nature__name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_network__name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_pf_dest__name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_speciality__name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subclass__name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subfamily__name
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_subform__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_nature_product_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_nature_product_id
+msgid "Nature"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_product_pharmaceutical_nature
+msgid "Nature article"
+msgstr "Nature de l'article"
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_product_pharmaceutical_network
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_network_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_network_id
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_network_view_tree
+msgid "Network"
+msgstr "Réseau"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__activity_calendar_event_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__activity_calendar_event_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Prochain événement du calendrier d'activité"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__activity_date_deadline
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__activity_date_deadline
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Date limite de la prochaine activité"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__activity_summary
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__activity_summary
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé de la prochaine activité"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__activity_type_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__activity_type_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type de la prochaine activité"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__product_pharmaceutical_family__tracking__none
+msgid "No Tracking"
+msgstr "Pas de suivi"
+
+#. module: dw_pharma_base
+#: model_terms:ir.actions.act_window,help:dw_pharma_base.action_product_pharmaceutical_class
+msgid "No class found. Let's create one!"
+msgstr "Aucune classe trouvée. Créons-en une !"
+
+#. module: dw_pharma_base
+#: model_terms:ir.actions.act_window,help:dw_pharma_base.action_product_pharmaceutical_pf_dest
+msgid "No destination found. Let's create one!"
+msgstr "Aucune destination trouvée. Créons-en une !"
+
+#. module: dw_pharma_base
+#: model_terms:ir.actions.act_window,help:dw_pharma_base.action_product_pharmaceutical_dosage
+msgid "No dosage found. Let's create one!"
+msgstr "Aucun dosage trouvé. Créons-en un !"
+
+#. module: dw_pharma_base
+#: model_terms:ir.actions.act_window,help:dw_pharma_base.action_product_pharmaceutical_family
+#: model_terms:ir.actions.act_window,help:dw_pharma_base.action_product_pharmaceutical_subfamily
+msgid "No family found. Let's create one!"
+msgstr "Aucune famille trouvée. Créons-en une !"
+
+#. module: dw_pharma_base
+#: model_terms:ir.actions.act_window,help:dw_pharma_base.action_product_pharmaceutical_form
+#: model_terms:ir.actions.act_window,help:dw_pharma_base.action_product_pharmaceutical_subform
+msgid "No form found. Let's create one!"
+msgstr "Aucun formulaire trouvé. Créons-en un !"
+
+#. module: dw_pharma_base
+#: model_terms:ir.actions.act_window,help:dw_pharma_base.action_product_pharmaceutical_network
+msgid "No network found. Let's create one!"
+msgstr "Aucun réseau trouvé. Créons-en un !"
+
+#. module: dw_pharma_base
+#: model_terms:ir.actions.act_window,help:dw_pharma_base.action_product_pharmaceutical_speciality
+msgid "No speciality found. Let's create one!"
+msgstr "Aucune specialités trouvée. Créons-en une !"
+
+#. module: dw_pharma_base
+#: model_terms:ir.actions.act_window,help:dw_pharma_base.action_product_pharmaceutical_subclass
+msgid "No subclass found. Let's create one!"
+msgstr "Aucune sous-classe trouvée. Créons-en une !"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__message_needaction_counter
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__message_needaction_counter
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__message_has_error_counter
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__message_has_error_counter
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_class__message_needaction_counter
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_family__message_needaction_counter
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_form__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Nombre de messages nécessitant une action"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_class__message_has_error_counter
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_family__message_has_error_counter
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_form__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec une erreur de livraison"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_pf_dest_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_pf_dest_id
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_pf_dest_view_tree
+msgid "PF Destination"
+msgstr "Destination PF"
+
+#. module: dw_pharma_base
+#: model:ir.actions.act_window,name:dw_pharma_base.action_product_pharmaceutical_pf_dest
+#: model:ir.model,name:dw_pharma_base.model_product_pharmaceutical_pf_dest
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_pharmaceutical_pf_dest
+msgid "PF destination"
+msgstr "Destination PF"
+
+#. module: dw_pharma_base
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_template_pharma_form_view
+msgid "Pharma"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_product_template
+msgid "Product"
+msgstr "Produit"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__product_categ_id
+msgid "Product Category"
+msgstr "Catégorie de produit"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__product_count
+msgid "Product Count"
+msgstr "Nombre de produits"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__product_detailed_type
+msgid "Product Type"
+msgstr "Type de produit"
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_product_product
+msgid "Product Variant"
+msgstr "Variante de produit"
+
+#. module: dw_pharma_base
+#. odoo-python
+#: code:addons/custom_addons/DW_PHARMA/dw_pharma_base/models/product_pharmaceutical.py:0
+#: code:addons/dw_pharma_base/models/product_pharmaceutical.py:0
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__product_ids
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_family_view_form
+#, python-format
+msgid "Products"
+msgstr "Produits"
+
+#. module: dw_pharma_base
+#: model:ir.actions.act_window,name:dw_pharma_base.action_product_pharmaceutical_subclass
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_pharmaceutical_subclass
+msgid "Products Subclass"
+msgstr "Sous-classe de produits"
+
+#. module: dw_pharma_base
+#: model:ir.actions.act_window,name:dw_pharma_base.action_product_pharmaceutical_subfamily
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_pharmaceutical_subfamily
+msgid "Products Subfamily"
+msgstr "Sous-famille de produits"
+
+#. module: dw_pharma_base
+#: model:ir.actions.act_window,name:dw_pharma_base.action_product_pharmaceutical_subform
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_pharmaceutical_subform
+msgid "Products Subform"
+msgstr "Sous-form de produits"
+
+#. module: dw_pharma_base
+#: model:ir.actions.act_window,name:dw_pharma_base.action_product_pharmaceutical_class
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_pharmaceutical_class
+msgid "Products class"
+msgstr "Classe de produits"
+
+#. module: dw_pharma_base
+#: model:ir.actions.act_window,name:dw_pharma_base.action_product_pharmaceutical_dosage
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_pharmaceutical_dosage
+msgid "Products dosage"
+msgstr "Dosage des produits"
+
+#. module: dw_pharma_base
+#: model:ir.actions.act_window,name:dw_pharma_base.action_product_pharmaceutical_family
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_pharmaceutical_family
+msgid "Products family"
+msgstr "Famille de produits"
+
+#. module: dw_pharma_base
+#: model:ir.actions.act_window,name:dw_pharma_base.action_product_pharmaceutical_form
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_pharmaceutical_form
+msgid "Products form"
+msgstr "Form de produits"
+
+#. module: dw_pharma_base
+#: model:ir.actions.act_window,name:dw_pharma_base.action_product_pharmaceutical_network
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_pharmaceutical_network
+msgid "Products network"
+msgstr "Réseau de produits"
+
+#. module: dw_pharma_base
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_config_product_pharma
+msgid "Products pharma"
+msgstr "Produits pharma"
+
+#. module: dw_pharma_base
+#: model:ir.actions.act_window,name:dw_pharma_base.action_product_pharmaceutical_speciality
+#: model:ir.ui.menu,name:dw_pharma_base.menu_product_pharmaceutical_speciality
+msgid "Products speciality"
+msgstr "Specialités de produits"
+
+#. module: dw_pharma_base
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_family_view_form
+msgid "Produits"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__res_partner__dw_supplier_nature__provider
+msgid "Provider"
+msgstr "Prestataire"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__rating_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__rating_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__rating_ids
+msgid "Ratings"
+msgstr "Évaluations"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_regis_num
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_regis_num
+msgid "Registration Number"
+msgstr "Numéro d'enregistrement"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__res_partner__dw_supplier_nature__regroupeur
+msgid "Regroupeur"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__activity_user_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__activity_user_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__activity_user_id
+msgid "Responsible User"
+msgstr "Utilisateur responsable"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__message_has_sms_error
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__message_has_sms_error
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__product_pharmaceutical_family__product_detailed_type__service
+msgid "Service"
+msgstr ""
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_speciality_product_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_speciality_product_id
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_speciality_view_tree
+msgid "Speciality"
+msgstr "Specialités"
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_product_pharmaceutical_speciality
+msgid "Speciality article"
+msgstr "Specialités d'article"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_class__activity_state
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_family__activity_state
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_form__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activitésEn retard : La date d'échéance est "
+"dépasséeAujourd'hui : La date de l'activité est aujourd'huiPlanifié : "
+"Activités futures"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__product_pharmaceutical_family__product_detailed_type__product
+msgid "Storable Product"
+msgstr "Produit stockable"
+
+#. module: dw_pharma_base
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_class_view_form
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_subclass_view_tree
+msgid "SubClass"
+msgstr "Sous-classe"
+
+#. module: dw_pharma_base
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_family_view_form
+msgid "SubFamily"
+msgstr "Sous-famille"
+
+#. module: dw_pharma_base
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_form_view_form
+msgid "SubForm"
+msgstr "Sous-Form"
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_product_pharmaceutical_subclass
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__subclass_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_subclass_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_subclass_id
+msgid "Subclass"
+msgstr "Sous-classe"
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_product_pharmaceutical_subfamily
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__subfamily_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_subfamily_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_subfamily_id
+msgid "Subfamily"
+msgstr "Sous-famille"
+
+#. module: dw_pharma_base
+#: model:ir.model,name:dw_pharma_base.model_product_pharmaceutical_subform
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__subform_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_pharma_subform_id
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_pharma_subform_id
+msgid "Subform"
+msgstr "Sous-form"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__res_partner__dw_supplier_nature__supplier
+msgid "Supplier"
+msgstr "Fournisseur"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_res_config_settings__module_dw_supplier_reference
+msgid "Supplier Reference"
+msgstr "Référence fournisseur"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_res_partner__dw_supplier_nature
+#: model:ir.model.fields,field_description:dw_pharma_base.field_res_users__dw_supplier_nature
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.dw_res_partner_pharma_form_view
+msgid "Supplier nature"
+msgstr "Nature du fournisseur"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,help:dw_pharma_base.field_product_product__dw_price_wholesaler
+#: model:ir.model.fields,help:dw_pharma_base.field_product_template__dw_price_wholesaler
+msgid "The price for selling to wholesalers."
+msgstr "Prix de vente aux grossistes"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__tracking
+msgid "Tracking"
+msgstr "Suivi"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_class__activity_exception_decoration
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_family__activity_exception_decoration
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_form__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type de l'activité exceptionnelle sur l'enregistrement"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_price_pua
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_price_pua
+msgid "Unit Purchase Price"
+msgstr "Prix d'achat unitaire"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__use_expiration_date
+msgid "Use Expiration Date"
+msgstr "Utiliser la date d'expiration"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_class__website_message_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_family__website_message_ids
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_pharmaceutical_form__website_message_ids
+msgid "Website Messages"
+msgstr "Messages du site web"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_class__website_message_ids
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_family__website_message_ids
+#: model:ir.model.fields,help:dw_pharma_base.field_product_pharmaceutical_form__website_message_ids
+msgid "Website communication history"
+msgstr "Historique de communication du site web"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields.selection,name:dw_pharma_base.selection__product_template__dw_pharma_duration_unit__years
+msgid "Years"
+msgstr "Années"
+
+#. module: dw_pharma_base
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_class_view_form
+msgid "e.g. Class .."
+msgstr "par ex. Classe .."
+
+#. module: dw_pharma_base
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_family_view_form
+msgid "e.g. Family .."
+msgstr "par ex. Famille .."
+
+#. module: dw_pharma_base
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_pharma_form_view_form
+msgid "e.g. Form .."
+msgstr "par ex. Form .."
+
+#. module: dw_pharma_base
+#: model_terms:ir.ui.view,arch_db:dw_pharma_base.product_template_pharma_form_view
+msgid "per"
+msgstr "Par"
+
+#. module: dw_pharma_base
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_product__dw_price_wholesaler
+#: model:ir.model.fields,field_description:dw_pharma_base.field_product_template__dw_price_wholesaler
+msgid "wholesale price"
+msgstr "prix grossiste"

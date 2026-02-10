@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_lot_history,dw.stock.lot.history,model_dw_stock_lot_history,base.group_user,1,1,1,1
+access_stock_lot_cancel_reason_user,access.stock.lot.cancel.reason,model_stock_lot_cancel_reason,base.group_user,1,1,1,1
+access_stock_lot_cancel_wizard_user,access.stock.lot.cancel.wizard,model_stock_lot_cancel_wizard,base.group_user,1,1,1,1
+access_stock_lot_status_user, access.stock.lot.status,model_stock_lot_status,base.group_user,1,1,1,1
+access_stock_lot_reanalyse_wizard_user, access.stock.lot.reanalyse.wizard,model_stock_lot_reanalyse_wizard,base.group_user,1,1,1,1
+access_stock_lot_reanalyse_line_wizard_user, access.stock.lot.reanalyse.line.wizard,model_stock_lot_reanalyse_line_wizard,base.group_user,1,1,1,1
+access_stock_lot_sub_lot_register_user,access.stock.lot.sub.lot.register.wizard,model_stock_lot_sub_lot_register,base.group_user,1,1,1,1

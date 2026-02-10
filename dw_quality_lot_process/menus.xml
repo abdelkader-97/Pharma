@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Action for listing reasons -->
+    <record id="action_cancel_reason" model="ir.actions.act_window">
+        <field name="name">Cancellation Reasons</field>
+        <field name="res_model">stock.lot.cancel.reason</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">current</field>
+    </record>
+     <!-- Menu for cancellation reasons -->
+    <menuitem id="menu_config_lot" 
+    name="Lot configuration" sequence="10" 
+    parent="dw_quality.menu_quality_configuration"/>
+
+    <!-- Submenu for listing reasons -->
+    <menuitem id="menu_cancel_reason_list" 
+    name="Reasons of loss " 
+    parent="menu_config_lot" 
+    action="action_cancel_reason"/>
+
+  
+
+</odoo>

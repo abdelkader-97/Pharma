@@ -1,0 +1,74 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dw_location_transfer_limit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-12 11:21+0000\n"
+"PO-Revision-Date: 2024-11-12 11:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dw_location_transfer_limit
+#: model:ir.model,name:dw_location_transfer_limit.model_stock_location
+msgid "Inventory Locations"
+msgstr "Emplacements de l'inventaire"
+
+#. module: dw_location_transfer_limit
+#: model:ir.module.category,description:dw_location_transfer_limit.category_transfer_limit
+msgid "Manage and configure transfer limits."
+msgstr "Configurer la limite des transferts"
+
+#. module: dw_location_transfer_limit
+#: model:ir.model.fields,field_description:dw_location_transfer_limit.field_stock_location__perform_transfer
+#: model:ir.model.fields,field_description:dw_location_transfer_limit.field_stock_storage_category__perform_transfer
+msgid "Perform Transfer"
+msgstr "Effectuer un transfert"
+
+#. module: dw_location_transfer_limit
+#: model:ir.model,name:dw_location_transfer_limit.model_product_template
+msgid "Product"
+msgstr "Produit"
+
+#. module: dw_location_transfer_limit
+#: model:ir.model,name:dw_location_transfer_limit.model_product_product
+msgid "Product Variant"
+msgstr "Variante de produit"
+
+#. module: dw_location_transfer_limit
+#: model:ir.model.fields,field_description:dw_location_transfer_limit.field_product_product__restrict_transfer
+#: model:ir.model.fields,field_description:dw_location_transfer_limit.field_product_template__restrict_transfer
+msgid "Restrict Transfer"
+msgstr "Restriction du transfert"
+
+#. module: dw_location_transfer_limit
+#: model:ir.model,name:dw_location_transfer_limit.model_stock_storage_category
+msgid "Storage Category"
+msgstr "Catégories d'emplacement"
+
+#. module: dw_location_transfer_limit
+#: model:ir.model.fields,help:dw_location_transfer_limit.field_stock_location__perform_transfer
+#: model:ir.model.fields,help:dw_location_transfer_limit.field_stock_storage_category__perform_transfer
+msgid "This field indicates if we can perfom a tranfer from this location"
+msgstr "Ce champ indique si nous pouvons effectuer un transfert à partir de ce lieu."
+
+#. module: dw_location_transfer_limit
+#: model:ir.model,name:dw_location_transfer_limit.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: dw_location_transfer_limit
+#: model:res.groups,name:dw_location_transfer_limit.group_transfer_limit_configuration
+msgid "Transfer Limit Configuration"
+msgstr "Configuration de la limite de transfert"
+
+#. module: dw_location_transfer_limit
+#: model:ir.module.category,name:dw_location_transfer_limit.category_transfer_limit
+msgid "Transfer Limits"
+msgstr "Limites de transfert"

@@ -1,0 +1,59 @@
+<odoo>
+    <record id="dw_analyse_methode_view_tree" model="ir.ui.view">
+        <field name="name">dw.analyse.methode.view.tree</field>
+        <field name="model">dw.analyse.methode</field>
+        <field name="arch" type="xml">
+            <list string="Methodes">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="description" widget="text"/>
+            </list>
+        </field>
+    </record>
+    <record id="dw_analyse_methode_view_form" model="ir.ui.view">
+        <field name="name">dw.analyse.methode.view.form</field>
+        <field name="model">dw.analyse.methode</field>
+        <field name="arch" type="xml">
+            <form string="Methodes">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="type"/>
+                            <field name="description" widget="text"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Principle">
+                            <field name="principle"/>
+                        </page>
+                        <page string="Procedure">
+                            <field name="procedure"/>
+                        </page>
+                        <page string="Specification">
+                            <field name="specification"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_dw_analyse_methode" model="ir.actions.act_window">
+        <field name="name">Methode</field>
+        <field name="res_model">dw.analyse.methode</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_analyse_report"
+              name="Analyses Report" sequence="50"
+              parent="dw_quality.menu_quality_configuration"/>
+    <menuitem
+            id="menu_quality_config_dw_analyse_methode"
+            name="Methodes"
+            action="action_dw_analyse_methode"
+            parent="dw_quality_control.menu_analyse_report"
+    />
+</odoo>

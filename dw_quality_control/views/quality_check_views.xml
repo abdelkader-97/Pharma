@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="dw_quality_check_view_tree_inherit" model="ir.ui.view">
+        <field name="name">quality.check.view.list.inherit</field>
+        <field name="model">dw.quality.check</field>
+        <field name="inherit_id" ref="dw_quality.quality_check_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="product_id" position="after">
+                <field name="lot_domain" column_invisible="1" widget="many2many_tags"/>
+                <field name="dw_reception_id" column_invisible="1"/>
+                <field name="quality_state" column_invisible="1"/>
+                <field name="picking_id"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="quality_check_view_form_inherit" model="ir.ui.view">
+        <field name="name">quality.check.view.form.inherit</field>
+        <field name="model">dw.quality.check</field>
+        <field name="inherit_id" ref="dw_quality.quality_check_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='picking_id']" position="attributes">
+                <attribute name="required">context.get('raw_material')</attribute>
+            </xpath>
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="product_tracking"/>
+            </xpath>
+            <xpath expr="//field[@name='product_id']" position="before">
+                <field name="create_date" string="Reception Date"/>
+                <field name="check_number" required="1"/>
+            </xpath>
+            <xpath expr="//field[@name='lot_id']" position="before">
+                <field name="lot_domain" invisible="1"/>
+                <field name="lot_id"
+                       invisible="0"
+                       options="{'no_create': True}"
+                       required="product_tracking == 'lot'"
+                       readonly="quality_state in ['pass','fail']"
+                       domain="[('id', 'in', lot_domain)]"/>
+            </xpath>
+
+            <field name="lot_id" position="after">
+                <field name="dw_num_supplier"/>
+                <field name="use_expiration_date" invisible="1"/>
+                <field name="expiration_date" invisible="not use_expiration_date"/>
+            </field>
+            <xpath expr="//notebook" position="before">
+                <group>
+                    <group string="Reception Information" invisible="not dw_reception_id and not dw_purchase_id and not partner_supplier_id">
+                        <field name="dw_reception_id" invisible="not dw_reception_id" force_save="1"/>
+                        <field name="dw_purchase_id" invisible="not dw_purchase_id" force_save="1"/>
+                        <field name="partner_supplier_id" invisible="not partner_supplier_id" force_save="1"/>
+                    </group>
+                    <group string="Picking Information">
+                        <field name="location_id"/>
+                        <field name="picking_lot_quantity"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='notes']" position="after">
+                <page string="Checks" name="checks">
+                    <field name="line_ids">
+                        <list editable="bottom">
+                            <field name="name" readonly="1" force_save="1"/>
+                            <field name="reference" readonly="1" force_save="1"/>
+                            <field name="standards" readonly="1" force_save="1"/>
+                            <field name="result"/>
+                        </list>
+                    </field>
+                </page>
+                <page string="Analyse Report" name="Analyse Report">
+                    <field name="dw_analyse_report_ids">
+                        <list editable="bottom">
+                            <field name="test_id"/>
+                            <field name="product_id"/>
+                            <field name="methode_ids" widget="many2many_tags"/>
+                            <field name="norm_id"/>
+                            <field name="resultat"/>
+                            <field name="resultat_type"/>
+                            <field name="company_id" column_invisible="1"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+            <xpath expr="//button[@name='do_alert'][2]" position="after">
+                <button class="oe_highlight" type="object" name="button_sample_request" string="Sample Request" invisible="quality_state not in ('none')"/>
+            </xpath>
+            <div name="button_box" position="inside">
+                <button class="oe_stat_button" type="object" name="action_view_sample_request" icon="fa-list-alt">
+                    <field name="simple_request_ids" string="Sample Request" widget="statinfo"/>
+                </button>
+            </div>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="production_date"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="dw_quality.quality_check_action_main" model="ir.actions.act_window">
+        <field name="context">{'default_raw_material' : True, 'raw_material' : True}</field>
+    </record>
+    <record id="dw_quality.quality_check_action_main" model="ir.actions.act_window">
+        <field name="context">{'default_raw_material' : True, 'raw_material' : True}</field>
+    </record>
+
+    <record id="quality_check_action_main_final_product" model="ir.actions.act_window">
+        <field name="name">Quality Checks</field>
+        <field name="res_model">dw.quality.check</field>
+        <field name="context">{'default_final_product' : True, 'final_product' : True}</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No quality check found
+            </p>
+            <p>
+                Define Quality Control Points in order to automatically generate
+                quality checks at the right logistic operation: transfers, manufacturing orders.
+            </p>
+        </field>
+    </record>
+</odoo>

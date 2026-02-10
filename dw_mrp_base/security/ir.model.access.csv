@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mrp_workorder_consumption,mrp.workorder.consumption,model_mrp_workorder_consumption,base.group_user,1,1,1,1
+access_mrp.routing.workcenter.consumption.model,mrp.routing.workcenter.consumption.model,model_mrp_routing_workcenter_consumption_model,base.group_user,1,1,1,1
+access_mrp_workorder_tracking_wizard,mrp_workorder_tracking_wizard,model_mrp_workorder_tracking_wizard,base.group_user,1,1,1,1
+access_mrp_production_lot,mrp.production.lot,model_mrp_production_lot,base.group_user,1,1,1,1

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="0">
+
+        <record id="stock_lot_form_view_inherited" model="ir.ui.view">
+            <field name="name">stcok.lot.form.inherited</field>
+            <field name="model">stock.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_child_lots" type="object" class="oe_stat_button" icon="fa-dedent" invisible="not children_lot_ids">
+                        <field name="children_lot_ids" widget="statinfo" string="Sub lots"/>
+                    </button>
+                    <button name="action_view_parent_lot" type="object" class="oe_stat_button" icon="fa-eject" invisible="not parent_lot_id">
+                        <field name="parent_lot_id" widget="statinfo" string="Parent"/>
+                    </button>
+                </xpath>
+                <xpath expr="//form//sheet" position="before">
+                    <field name="compliance_check" invisible="1"/>
+                    <header>
+                        <button name="action_set_quarantine" type="object" class="btn-primary"
+                                invisible="lot_status != 'cancelled' or product_id==False or compliance_check == False"
+                                string="Set quarantine"/>
+
+                        <button name="action_set_conform" type="object" class="btn-primary"
+                                invisible="lot_status != 'quarantine' or lot_quarantine_status!='analyzed' or product_id==False or compliance_check == False"
+                                string="Set conform"/>
+
+                        <button name="action_set_not_conform" type="object" string="Set Not Conform" class="btn-primary"
+                                invisible="lot_status !='quarantine' or lot_quarantine_status!='analyzed' or product_id==False or compliance_check == False"/>
+
+                        <button name="action_set_blocked" type="object" string="Block" class="btn-primary"
+                                invisible="lot_status not in ['conform','not_conform'] or product_id==False or compliance_check == False"/>
+
+                        <button name="action_set_cancelled" type="object" string="Cancel" class="btn-primary"
+                                invisible="lot_status not in ['conform','not_conform'] or product_id==False or compliance_check == False"/>
+
+
+                        <field name="lot_status" widget="statusbar"
+                               invisible=" product_id==False or compliance_check == False"/>
+
+                    </header>
+                    <header invisible="lot_status!='quarantine' or product_id==False or compliance_check == False">
+                        <button name="action_set_in_progress" type="object" string="In progress"
+                                invisible="lot_quarantine_status not in ['draft','reanalyzed']"/>
+                        <button name="action_set_analyzed" type="object" string="Analyze"
+                                invisible="lot_quarantine_status not in ['in_progress']"/>
+                        <button name="action_set_reanalyzed" type="object" string="Reanalyze"
+                                invisible="lot_quarantine_status!='analyzed'"/>
+                        <field name="lot_quarantine_status" widget="statusbar"/>
+                    </header>
+                </xpath>
+                <xpath expr="//form/sheet/notebook" position="inside">
+                    <page string="Status History">
+                        <field name="lot_status_history_ids">
+                            <list>
+                                <field name="change_date"/>
+                                <field name="user_id"/>
+                                <field name="previous_date_expiration"/>
+                                <field name="new_date_expiration"/>
+                                <field name="previous_status"/>
+                                <field name="new_status"/>
+                                <field name="previous_lot_quarantine_status"/>
+                                <field name="new_lot_quarantine_status"/>
+                                <field name="reason_id"/>
+                                <field name="note"/>
+
+                            </list>
+                        </field>
+                    </page>
+                    <page string="Children Lots" invisible="1">
+                        <field name="children_lot_ids">
+                            <list>
+                                <field name="name"/>
+                            </list>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//form/sheet/group/group//field[@name='product_id']" position="after">
+                    <field name="initial_qty"/>
+                    <field name="is_child" invisible="1"/>
+                    <field name="parent_lot_id" invisible="1"/>
+                    <field name="children_lot_ids" invisible="1"/>
+                </xpath>
+
+            </field>
+        </record>
+        <record id="stock_lot_tree_view_inherited" model="ir.ui.view">
+            <field name="name">stcok.lot.tree.inherited</field>
+            <field name="model">stock.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_id']" position="after">
+                    <field name="lot_status"/>
+                    <field name="lot_quarantine_status"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

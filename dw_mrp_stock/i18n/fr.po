@@ -1,0 +1,125 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dw_mrp_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-17 14:53+0000\n"
+"PO-Revision-Date: 2024-11-17 14:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dw_mrp_stock
+#: model:ir.model.fields,field_description:dw_mrp_stock.field_stock_lot__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: dw_mrp_stock
+#: model_terms:ir.ui.view,arch_db:dw_mrp_stock.stock_lot_form_inherit
+msgid "Archived"
+msgstr "Archivé"
+
+#. module: dw_mrp_stock
+#: model:ir.model.fields,field_description:dw_mrp_stock.field_mrp_production__dw_transfer_pf_done
+msgid "FP Transfer Done"
+msgstr "Transfert PF effectué"
+
+#. module: dw_mrp_stock
+#: model:ir.model,name:dw_mrp_stock.model_stock_lot
+msgid "Lot/Serial"
+msgstr "Lot/série"
+
+#. module: dw_mrp_stock
+#: model:ir.model.fields,field_description:dw_mrp_stock.field_mrp_production__dw_is_colture
+msgid "MO closed"
+msgstr "OF fermé"
+
+#. module: dw_mrp_stock
+#: model_terms:ir.ui.view,arch_db:dw_mrp_stock.view_mrp_production_stock_form
+msgid "Not Closed"
+msgstr "non fermé"
+
+#. module: dw_mrp_stock
+#. odoo-python
+#: code:addons/dw_mrp_stock/models/mrp_production.py:0
+#: code:addons/dw_mrp_stock/models/mrp_production.py:0
+#, python-format
+msgid "PF Picking(s)"
+msgstr "Transfert(s) PF"
+
+#. module: dw_mrp_stock
+#: model:ir.model,name:dw_mrp_stock.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Type de Transfert"
+
+#. module: dw_mrp_stock
+#: model:ir.model.fields,field_description:dw_mrp_stock.field_stock_picking__production_id
+msgid "Production"
+msgstr "Production"
+
+#. module: dw_mrp_stock
+#: model:ir.model,name:dw_mrp_stock.model_mrp_production
+msgid "Production Order"
+msgstr "Ordre de production"
+
+#. module: dw_mrp_stock
+#: model:ir.model.fields,field_description:dw_mrp_stock.field_stock_warehouse__dw_transit_production_id
+msgid "Production Transit Location"
+msgstr "Emplacement de transit de production"
+
+#. module: dw_mrp_stock
+#: model:ir.model.fields,field_description:dw_mrp_stock.field_stock_picking_type__stock_production
+msgid "Stock Production"
+msgstr "Production en stock"
+
+#. module: dw_mrp_stock
+#. odoo-python
+#: code:addons/custom_addons/DW_PHARMA/dw_mrp_stock/models/mrp_production.py:0
+#: code:addons/dw_mrp_stock/models/mrp_production.py:0
+#, python-format
+msgid "There is no transit location selected"
+msgstr "Aucun emplacement de transit sélectionné"
+
+#. module: dw_mrp_stock
+#: model:ir.model,name:dw_mrp_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: dw_mrp_stock
+#: model_terms:ir.ui.view,arch_db:dw_mrp_stock.view_mrp_production_stock_form
+msgid "Transfer FP"
+msgstr "Transfert PF"
+
+#. module: dw_mrp_stock
+#: model:ir.model,name:dw_mrp_stock.model_stock_warehouse
+msgid "Warehouse"
+msgstr "Entrepôt"
+
+#. module: dw_mrp_stock
+#. odoo-python
+#: code:addons/custom_addons/DW_PHARMA/dw_mrp_stock/models/stock_picking_type.py:0
+#: code:addons/dw_mrp_stock/models/stock_picking_type.py:0
+#: model:ir.model.fields,help:dw_mrp_stock.field_stock_picking_type__stock_production
+#, python-format
+msgid ""
+"When checked it means that this operation will be used as manufacturing "
+"operation but in stock location not in the manufacturing unit"
+msgstr ""
+"Lorsque cette option est cochée, cela signifie que cette opération sera utilisée comme opération de fabrication "
+"mais dans l'emplacement de stockage et non dans l'unité de fabrication"
+
+#. module: dw_mrp_stock
+#: model_terms:ir.ui.view,arch_db:dw_mrp_stock.view_mrp_production_stock_form
+msgid "closed"
+msgstr "fermé"
+
+#. module: dw_mrp_stock
+#: model:ir.model.fields,field_description:dw_mrp_stock.field_mrp_production__dw_leftover_done
+msgid "leftover Done"
+msgstr "reste Fait"

@@ -1,0 +1,4 @@
+# -*- coding: utf-8 -*-
+
+from . import quality_check_wizard
+from . import on_demand_quality_check_wizard

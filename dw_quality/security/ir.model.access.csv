@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_quality_alert_team,dw.quality.alert.team,dw_quality.model_dw_quality_alert_team,base.group_user,1,1,1,1
+access_quality_check,dw.quality.check,dw_quality.model_dw_quality_check,base.group_user,1,1,1,1
+access_quality_alert,dw.quality.alert,dw_quality.model_dw_quality_alert,base.group_user,1,1,1,1
+access_quality_reason,dw.quality.reason,dw_quality.model_dw_quality_reason,base.group_user,1,1,1,1
+access_quality_tag,dw.quality.tag,dw_quality.model_dw_quality_tag,base.group_user,1,1,1,1
+access_quality_alert_stage,dw.quality.alert.stage,dw_quality.model_dw_quality_alert_stage,base.group_user,1,1,1,1
+access_quality_point_user,dw.quality.point,dw_quality.model_dw_quality_point,base.group_user,1,1,1,1
+access_quality_point_test_type,dw.quality.point.test_type,dw_quality.model_dw_quality_point_test_type,base.group_user,1,1,1,1
+access_quality_check_wizard,dw.quality.check.wizard,model_dw_quality_check_wizard,base.group_user,1,1,1,1
+access_on_demand_quality_check_wizard,dw.quality.check.on.demand,model_dw_quality_check_on_demand,base.group_user,1,1,1,1

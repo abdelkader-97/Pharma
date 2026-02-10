@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="quality_point_view_form" model="ir.ui.view">
+        <field name="name">quality.point.view.form</field>
+        <field name="model">dw.quality.point</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_see_quality_checks" type="object" icon="fa-check" class="oe_stat_button">
+                            <field string="Quality Checks" name="check_count" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <h2>
+                        <field name="name" readonly="1"/>
+                    </h2>
+                    <group>
+                        <group>
+                            <field name="active" invisible="1"/>
+                            <field name="company_id" invisible="1"/>
+                            <field name="title"/>
+                            <field name="product_category_ids" widget="many2many_tags"/>
+                            <field name="picking_type_ids" string="Operations" widget="many2many_tags"/>
+                            <field name="company_id"/>
+                            <field name="user_id" widget="many2one_avatar_user"/>
+                        </group>
+                        <group>
+                            <field name="measure_on"/>
+                            <field name="measure_frequency_type" string="Control Frequency"/>
+                            <label for="measure_frequency_value" string=""
+                                   invisible="measure_frequency_type in ('all', 'on_demand')"/>
+                            <div class="o_row" invisible="measure_frequency_type in ('all', 'on_demand')">
+                                <span invisible="measure_frequency_type in ('all', 'on_demand')">Every</span>
+                                <field name="measure_frequency_value" nolabel="1"
+                                       invisible="measure_frequency_type != 'random'"/>
+                                <label for="measure_frequency_value" string="% of Operations"
+                                       invisible="measure_on == 'move_line' or measure_frequency_type != 'random'"/>
+                                <label for="measure_frequency_value" string="% of Transfers"
+                                       invisible="measure_on != 'move_line' or measure_frequency_type != 'random'"/>
+                                <field name="measure_frequency_unit_value" string="Frequency" nolabel="1"
+                                       invisible="measure_frequency_type != 'periodical'"/>
+                                <field name="measure_frequency_unit" invisible="measure_frequency_type != 'periodical'"
+                                       required="measure_frequency_type == 'periodical'"/>
+                            </div>
+                            <label for="testing_percentage_within_lot" string="Partial Test"
+                                   invisible="measure_on != 'move_line'"/>
+                            <div class="o_row" invisible="measure_on != 'move_line'">
+                                <span>Test</span>
+                                <field name="testing_percentage_within_lot" nolabel="1"/>
+                                <span>% of products</span>
+                            </div>
+                            <field name="test_type" invisible="1"/>
+                            <field string="Type" name="test_type_id" options="{'no_open': True, 'no_create': True}"/>
+                            <label for="norm" invisible="test_type != 'measure'"/>
+                            <div class="o_row" invisible="test_type != 'measure'">
+                                <field name="norm" required="test_type == 'measure'"/>
+                                <field name="norm_unit" string="Unit of Measure" required="test_type == 'measure'"/>
+                            </div>
+                            <label for="tolerance_min" string="Tolerance" invisible="test_type != 'measure'"/>
+                            <div invisible="test_type != 'measure'" class="o_row">
+                                <span>from</span>
+                                <field name="tolerance_min"/>
+                                <span>to</span>
+                                <field name="tolerance_max"/>
+                            </div>
+                            <field name="team_id" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="failure_location_ids" invisible="measure_on != 'move_line'"
+                                   widget="many2many_tags"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Instructions" name="instructions">
+                            <field name="note" placeholder="Describe the quality check to do..."/>
+                        </page>
+                        <page string="Message If Failure" name="message_if_failure"
+                              invisible="test_type in ['picture', 'instructions', 'register_consumed_materials', 'print_label']">
+                            <field name="failure_message"/>
+                        </page>
+                        <page string="Notes" name="Notes">
+                            <field name="reason" string="Note"
+                                   placeholder="Describe why you need to perform this quality check..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="quality_point_view_tree" model="ir.ui.view">
+        <field name="name">quality.point.view.list</field>
+        <field name="model">dw.quality.point</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name" decoration-bf="1"/>
+                <field name="title" optional="show"/>
+                <field name="product_ids" widget="many2many_tags" optional="show"/>
+                <field name="product_category_ids" widget="many2many_tags" optional="hide"/>
+                <field name="picking_type_ids" widget="many2many_tags" optional="show" string="Operations"/>
+                <field name="measure_on" optional="show"/>
+                <field name="measure_frequency_type" optional="hide"/>
+                <field name="is_lot_tested_fractionally" optional="hide"/>
+                <field name="testing_percentage_within_lot" optional="hide" string="Testing % Within Lot"/>
+                <field name="test_type_id" optional="show" string="Type"/>
+                <field name="team_id" optional="show"/>
+                <field name="user_id" optional="hide" widget='many2one_avatar_user'/>
+                <field name="company_id" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="quality_point_action">
+        <field name="name">Quality Control Points</field>
+        <field name="res_model">dw.quality.point</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No quality control point found
+            </p>
+            <p>
+                Quality control points define the quality checks which should be
+                performed at each operation, for your different products.
+            </p>
+        </field>
+    </record>
+</odoo>

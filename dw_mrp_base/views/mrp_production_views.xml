@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_mrp_production_form" model="ir.ui.view">
+        <field name="name">mrp_production.form</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook//field[@name='origin']" position="after">
+                <field name="extra_cost" readonly="state in ['done']"/>
+            </xpath>
+
+            <xpath expr="//button[@name='action_update_bom']" position="attributes">
+                <attribute name="groups">dw_mrp_base.group_bom_mo_manager</attribute>
+            </xpath>
+
+            <xpath expr="//header" position="after">
+                <field name="lot_dates_set" invisible="1"/>
+                <field name="use_expiration_date" invisible="1"/>
+                <div class="alert alert-warning text-center o_form_header"
+                     role="alert"
+                     style="margin-bottom:0px;"
+                     invisible="not use_expiration_date or not lot_producing_id or lot_dates_set">
+                    <bold>
+                        Your produced lot doesn't have an expiration date, please correct it !
+                    </bold>
+                </div>
+            </xpath>
+            <xpath expr="//button[@name='button_mark_done']" position="after">
+                <button name="action_set_lot_dates" class="btn-warning" type="object" string="Set lot dates"
+                        invisible="not use_expiration_date or not lot_producing_id or lot_dates_set"/>
+            </xpath>
+            <xpath expr="//field[@name='location_dest_id']" position="attributes">
+                <attribute name="force_save">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='location_src_id']" position="attributes">
+                <attribute name="force_save">1</attribute>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
+

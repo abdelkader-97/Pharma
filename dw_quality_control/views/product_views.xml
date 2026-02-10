@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_template_property_form_inherit" model="ir.ui.view">
+        <field name="name">product.template.quality.control.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="stock.view_template_property_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='operations']" position="after">
+                <group string="Quality Model" name="quality_model">
+                    <field name="quality_model_id"/>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='general_information']" position="after">
+                <page name="Quality" string="quality">
+                    <group string="Quality Configuration" name="quality_config">
+
+                        <field name="auto_qc_gen"/>
+
+                    </group>
+
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+    <record id="view_template_form_inherit" model="ir.ui.view">
+        <field name="name">product.template.only.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_open_product_lot']" position="after">
+                <button class="oe_stat_button"
+                        type="object"
+                        name="action_open_sampling"
+                        icon="fa-flask">
+                    <field string="Testing" name="dw_sampling_count" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_product_template_form_view" model="ir.ui.view">
+        <field name="name">product.template.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <page name="invoicing" position="after">
+                <page string="Analyse Report" name="analyse_report">
+                    <field name="dw_analysis_report_ids" context="{'default_product_id': id}">
+                        <list editable="bottom">
+                            <field name="test_id"/>
+                            <field name="methode_ids" widget="many2many_tags"/>
+                            <field name="norm_id"/>
+                        </list>
+                    </field>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,582 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dw_mrp_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-24 14:27+0000\n"
+"PO-Revision-Date: 2024-12-24 14:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dw_mrp_base
+#: model:res.groups,comment:dw_mrp_base.group_bom_mo_manager
+msgid ""
+"\n"
+"            This group is for users who need advanced permissions in the manufacturing module.\n"
+"            Assigning this group automatically grants access to the \"MRP Manager\" permission.\n"
+"            The group can modify on Components MO and update BOM of MO.\n"
+"        "
+msgstr ""
+"\n"
+"            Ce groupe est destiné aux utilisateurs qui ont besoin d'autorisations avancées dans le module de fabrication.\n"
+"            L'attribution de ce groupe accorde automatiquement l'accès au \"MRP Manager\" permission.\n"
+"            Le groupe peut modifier les composants MO et mettre à jour la nomenclature des MO.\n"
+"        "
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,help:dw_mrp_base.field_mrp_workorder_tracking_wizard__production_state
+#: model:ir.model.fields,help:dw_mrp_base.field_mrp_workorder_tracking_wizard__state
+msgid ""
+" * Draft: The MO is not confirmed yet.\n"
+" * Confirmed: The MO is confirmed, the stock rules and the reordering of the components are trigerred.\n"
+" * In Progress: The production has started (on the MO or on the WO).\n"
+" * To Close: The production is done, the MO has to be closed.\n"
+" * Done: The MO is closed, the stock moves are posted. \n"
+" * Cancelled: The MO has been cancelled, can't be confirmed anymore."
+msgstr ""
+" * Brouillon: Le MO n'est pas encore confirmé.\n"
+" * Confirmé: Le MO est confirmé, les règles de stock et la réorganisation des composants sont déclenchées.\n"
+" * En cours: La production a commencé (sur le MO ou sur le WO).\n"
+" * Pour fermer: La production est terminée, le MO doit être fermé.\n"
+" * Fait: Le MO est fermé, les mouvements de stock sont affichés. \n"
+" * Annulé: Le MO a été annulé, il ne peut plus être confirmé."
+
+#. module: dw_mrp_base
+#: model:res.groups,name:dw_mrp_base.group_bom_mo_manager
+msgid " BOM and MO Manager"
+msgstr "Responsable BOM et MO"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_dw_mrp_bom_form__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: dw_mrp_base
+#: model_terms:ir.ui.view,arch_db:dw_mrp_base.dw_view_mrp_bom_form_view_inherit
+msgid "BOM Configuration"
+msgstr "Configuration de la nomenclature"
+
+#. module: dw_mrp_base
+#: model:ir.model,name:dw_mrp_base.model_mrp_production_backorder_line
+msgid "Backorder Confirmation Line"
+msgstr "Ligne de confirmation de reliquat"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_backorder__mrp_production_backorder_line_ids
+msgid "Backorder Confirmation Lines"
+msgstr "Lignes de confirmation de reliquat"
+
+#. module: dw_mrp_base
+#: model:ir.model,name:dw_mrp_base.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Nomenclature"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_consumption__bom_product_ids
+msgid "Bom Product"
+msgstr "Bom Produit"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production__can_edit_move
+msgid "Can Edit Move"
+msgstr "Can Edit Move"
+
+#. module: dw_mrp_base
+#: model_terms:ir.ui.view,arch_db:dw_mrp_base.mrp_production_lot_wizard_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_dw_mrp_bom_form__company_id
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_routing_workcenter_consumption_model__company_id
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_consumption__company_id
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__company_id
+msgid "Company"
+msgstr "Entreprise"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder__consumption_ids
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__consumption_ids
+#: model:ir.model.fields,field_description:dw_mrp_base.field_stock_move_line__consumption_id
+msgid "Consumption"
+msgstr "Consommation"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_routing_workcenter__consumption_model_ids
+msgid "Consumption Model"
+msgstr "Modèle de consommation"
+
+#. module: dw_mrp_base
+#: model:ir.actions.act_window,name:dw_mrp_base.action_mrp_production_sublot_wizard
+msgid "Create Sublot"
+msgstr "Créer un sous-lot"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_dw_mrp_bom_form__create_uid
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_lot__create_uid
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_routing_workcenter_consumption_model__create_uid
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_consumption__create_uid
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__create_uid
+msgid "Created by"
+msgstr "Créer par"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_dw_mrp_bom_form__create_date
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_lot__create_date
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_routing_workcenter_consumption_model__create_date
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_consumption__create_date
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__create_date
+msgid "Created on"
+msgstr "Créer le"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_lot__date_alert
+msgid "Date Alert"
+msgstr "date d'alerte"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_dw_mrp_bom_form__description
+msgid "Description"
+msgstr "Description"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_dw_mrp_bom_form__display_name
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_lot__display_name
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_routing_workcenter_consumption_model__display_name
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_consumption__display_name
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_bom__dw_location_dest_id
+msgid "Emplacement des PF"
+msgstr "Emplacement des PFs"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_bom__dw_location_component_id
+msgid "Location of components"
+msgstr "Emplacement des composants"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_lot__expiration_date
+msgid "Expiration Date"
+msgstr "Date d'expiration"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production__extra_cost
+msgid "Extra Unit Cost"
+msgstr "Coût de l'unité supplémentaire"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_bom__dw_force_mrp_config
+msgid "Force Configuration"
+msgstr "Configuration force"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_bom__dw_mrp_forme_id
+msgid "Forme"
+msgstr "Forme"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_dw_mrp_bom_form__id
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_lot__id
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_routing_workcenter_consumption_model__id
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_consumption__id
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__is_user_working
+msgid "Is the Current User Working"
+msgstr "L'utilisateur actuel est-il en train de travailler"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_dw_mrp_bom_form__write_uid
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_lot__write_uid
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_routing_workcenter_consumption_model__write_uid
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_consumption__write_uid
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_dw_mrp_bom_form__write_date
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_lot__write_date
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_routing_workcenter_consumption_model__write_date
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_consumption__write_date
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_lot__lot_id
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_consumption__lot_id
+#: model:ir.model.fields.selection,name:dw_mrp_base.selection__mrp_bom__tracking_type__lot
+#: model:ir.model.fields.selection,name:dw_mrp_base.selection__mrp_production_backorder__tracking_type__lot
+#: model:ir.model.fields.selection,name:dw_mrp_base.selection__mrp_production_backorder_line__tracking_type__lot
+msgid "Lot"
+msgstr "Lot"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production__lot_dates_set
+msgid "Lot Dates Set"
+msgstr "Dates de lot définies"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_bom__dw_majoration
+msgid "Majoration"
+msgstr "Majoration"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__move_list_raw_ids
+msgid "Move List Raw"
+msgstr "Move List Raw"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_backorder__mrp_production_ids
+msgid "Mrp Production"
+msgstr "Production Mrp"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_dw_mrp_bom_form__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_backorder__new_sublot
+msgid "New Sublot"
+msgstr "Nouveau sous-lot"
+
+#. module: dw_mrp_base
+#: model_terms:ir.actions.act_window,help:dw_mrp_base.action_dw_mrp_form
+msgid "No mrp form found. Let's create one!"
+msgstr "Aucun formulaire mrp n'a été trouvé. Créons-en un !"
+
+#. module: dw_mrp_base
+#: model:ir.actions.act_window,name:dw_mrp_base.action_dw_mrp_form
+#: model:ir.ui.menu,name:dw_mrp_base.menu_dw_mrp_bom
+#: model_terms:ir.ui.view,arch_db:dw_mrp_base.dw_mrp_form_view_tree
+msgid "Nomenclature form"
+msgstr "BOM forme"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_consumption__old_quantity
+msgid "Old Quantity"
+msgstr "Ancienne quantité"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__operation_id
+msgid "Operation"
+msgstr "Operation"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__emp_pin
+msgid "PIN employee"
+msgstr "PIN Employé"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,help:dw_mrp_base.field_mrp_workorder_tracking_wizard__worksheet_google_slide
+msgid ""
+"Paste the url of your Google Slide. Make sure the access to the document is "
+"public."
+msgstr ""
+"Collez l'URL de votre Google Slide. Assurez-vous que l'accès au document est"
+" public."
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_routing_workcenter_consumption_model__product_id
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_consumption__product_id
+msgid "Product"
+msgstr "Produit"
+
+#. module: dw_mrp_base
+#: model:ir.model,name:dw_mrp_base.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Mouvements de produit (Ligne de mouvement de stock)"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_lot__production_id
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__production_id
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__production_ids
+msgid "Production"
+msgstr "Production"
+
+#. module: dw_mrp_base
+#: model_terms:ir.ui.view,arch_db:dw_mrp_base.dw_view_mrp_bom_form_view_inherit
+msgid "Production Configuraton"
+msgstr "Configuration Production"
+
+#. module: dw_mrp_base
+#: model:ir.model,name:dw_mrp_base.model_mrp_production
+msgid "Production Order"
+msgstr "Ordre de production"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__production_state
+msgid "Production State"
+msgstr "etat de la production"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_consumption__quantity
+msgid "Quantity"
+msgstr "quantité"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_lot__removal_date
+msgid "Removal Date"
+msgstr "Date de suppression"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_routing_workcenter_consumption_model__routing_id
+msgid "Routing"
+msgstr "Routage"
+
+#. module: dw_mrp_base
+#. odoo-python
+#: code:addons/ODOO/odoo-smartest/DW_PHARMA/dw_mrp_base/models/mrp_production.py:0
+#: code:addons/dw_mrp_base/models/mrp_production.py:0
+#, python-format
+msgid "Set Production lot dates"
+msgstr "Définir les dates des lots de production"
+
+#. module: dw_mrp_base
+#: model_terms:ir.ui.view,arch_db:dw_mrp_base.view_mrp_production_form
+msgid "Set lot dates"
+msgstr "Définir les dates de lots"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_backorder__show_backorder_lines
+msgid "Show backorder lines"
+msgstr "Afficher les lignes du reliquat"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__state
+msgid "State"
+msgstr "État"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__state_workorder
+msgid "Status"
+msgstr "Statut"
+
+#. module: dw_mrp_base
+#: model:ir.model,name:dw_mrp_base.model_stock_move
+msgid "Stock Move"
+msgstr "Mouvement de stock"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields.selection,name:dw_mrp_base.selection__mrp_bom__tracking_type__sublot
+#: model:ir.model.fields.selection,name:dw_mrp_base.selection__mrp_production_backorder__tracking_type__sublot
+#: model:ir.model.fields.selection,name:dw_mrp_base.selection__mrp_production_backorder_line__tracking_type__sublot
+msgid "Sublot"
+msgstr "sous-lot"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_backorder__sublot_id
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_backorder_line__sublot_id
+msgid "Sublot Number"
+msgstr "Numero de sous-lot"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_bom__mrp_sublot_wizard_id
+msgid "Sublot Wizard ID"
+msgstr "sous-lot Wizard ID"
+
+#. module: dw_mrp_base
+#: model_terms:ir.ui.view,arch_db:dw_mrp_base.mrp_production_lot_wizard_form
+msgid "Submit"
+msgstr "Soumettre"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder__technician_ids
+msgid "Technician"
+msgstr "Technicien"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_bom__tracking_type
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production__tracking_type
+#: model_terms:ir.ui.view,arch_db:dw_mrp_base.dw_view_mrp_bom_form_view_inherit
+msgid "Tracking By"
+msgstr "Suivi par"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_backorder__tracking_type
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_backorder_line__tracking_type
+msgid "Tracking Type"
+msgstr "Suivi par"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_lot__use_date
+msgid "Use Date"
+msgstr "Date d'utilisation"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production__use_expiration_date
+msgid "Use Expiration Date"
+msgstr "Utiliser la date d'expiration"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__user_id
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,help:dw_mrp_base.field_mrp_production__use_expiration_date
+msgid ""
+"When this box is ticked, you have the possibility to specify dates to manage"
+" product expiration, on the product and on the corresponding lot/serial "
+"numbers"
+msgstr ""
+"Lorsque cette case est cochée, vous avez la possibilité de spécifier des "
+"dates à gérer expiration du produit, sur le produit et sur le lot/série "
+"correspondant Nombres"
+
+#. module: dw_mrp_base
+#. odoo-python
+#: code:addons/ODOO/odoo-smartest/DW_PHARMA/dw_mrp_base/models/mrp_production.py:0
+#: code:addons/dw_mrp_base/models/mrp_production.py:0
+#, python-format
+msgid "Wizard Upload Workforce"
+msgstr "Wizard Télécharger la main d'oeuvre"
+
+#. module: dw_mrp_base
+#: model:ir.model,name:dw_mrp_base.model_mrp_production_backorder
+msgid "Wizard to mark as done or create back order, with Sublot Options"
+msgstr "Assistant pour marquer comme terminé ou créer un reliquat"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__workcenter_id
+msgid "Work Center"
+msgstr "Centre de travail"
+
+#. module: dw_mrp_base
+#: model:ir.model,name:dw_mrp_base.model_mrp_routing_workcenter
+msgid "Work Center Usage"
+msgstr "Utilisation du poste de travail"
+
+#. module: dw_mrp_base
+#: model:ir.model,name:dw_mrp_base.model_mrp_workorder
+msgid "Work Order"
+msgstr "Ordre de travail"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__workorder_ids
+msgid "Work Orders"
+msgstr "Ordres de travail"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__working_state
+msgid "Workcenter Status"
+msgstr "Statut du centre de travail"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_consumption__workorder_id
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__workorder_id
+msgid "Workorder"
+msgstr "Bon de travail"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__workorder_state
+msgid "Workorder State"
+msgstr "État de l'ordre de travail"
+
+#. module: dw_mrp_base
+#: model:ir.actions.server,name:dw_mrp_base.workorder_track_action
+#: model:ir.model,name:dw_mrp_base.model_mrp_workorder_tracking_wizard
+msgid "Workorder Tracking"
+msgstr "Suivi des bons de travail"
+
+#. module: dw_mrp_base
+#. odoo-python
+#: code:addons/ODOO/odoo-smartest/DW_PHARMA/dw_mrp_base/models/mrp_workorder.py:0
+#: code:addons/dw_mrp_base/models/mrp_workorder.py:0
+#, python-format
+msgid "Workorder consumptions"
+msgstr "Consommations des bons de travail"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__worksheet
+msgid "Worksheet"
+msgstr "Fiche de travail"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__worksheet_type
+msgid "Worksheet Type"
+msgstr "type de Fiche de travail"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_workorder_tracking_wizard__worksheet_google_slide
+msgid "Worksheet URL"
+msgstr "type de la Fiche de travail"
+
+#. module: dw_mrp_base
+#. odoo-python
+#: code:addons/ODOO/odoo-smartest/DW_PHARMA/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/ODOO/odoo-smartest/DW_PHARMA/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/ODOO/odoo-smartest/DW_PHARMA/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/ODOO/odoo-smartest/DW_PHARMA/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#, python-format
+msgid "You have to select the User first"
+msgstr "Vous devez d'abord sélectionner l'utilisateur"
+
+#. module: dw_mrp_base
+#. odoo-python
+#: code:addons/ODOO/odoo-smartest/DW_PHARMA/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/ODOO/odoo-smartest/DW_PHARMA/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/ODOO/odoo-smartest/DW_PHARMA/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/ODOO/odoo-smartest/DW_PHARMA/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#: code:addons/dw_mrp_base/wizard/mrp_workorder_tracking_wizard.py:0
+#, python-format
+msgid "You have to select the Workorder first"
+msgstr "Vous devez d'abord sélectionner l'ordre de travail"
+
+#. module: dw_mrp_base
+#: model_terms:ir.ui.view,arch_db:dw_mrp_base.view_mrp_production_form
+msgid "Your produced lot doesn't have an expiration date, please correct it !"
+msgstr "Votre lot produit n'a pas de date d'expiration, merci de la corriger !"
+
+#. module: dw_mrp_base
+#: model_terms:ir.ui.view,arch_db:dw_mrp_base.view_mrp_production_sublot_wizard_form
+msgid "add sublot"
+msgstr "ajouter sous-lot"
+
+#. module: dw_mrp_base
+#: model:ir.model,name:dw_mrp_base.model_dw_mrp_bom_form
+msgid "dw.mrp.bom.form"
+msgstr "dw.mrp.bom.form"
+
+#. module: dw_mrp_base
+#: model:ir.model,name:dw_mrp_base.model_mrp_production_lot
+msgid "mrp.production.lot"
+msgstr "mrp.production.lot"
+
+#. module: dw_mrp_base
+#: model:ir.model,name:dw_mrp_base.model_mrp_routing_workcenter_consumption_model
+msgid "mrp.routing.workcenter.consumption.model"
+msgstr "mrp.routing.workcenter.consumption.model"
+
+#. module: dw_mrp_base
+#: model:ir.model,name:dw_mrp_base.model_mrp_workorder_consumption
+msgid "mrp.workorder.consumption"
+msgstr "mrp.workorder.consumption"
+
+#. module: dw_mrp_base
+#: model:ir.model.fields,field_description:dw_mrp_base.field_mrp_production_backorder__bom_id
+msgid "mrp_bom"
+msgstr "Bom"

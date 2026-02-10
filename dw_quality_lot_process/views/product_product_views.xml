@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="0">
+        <record id="product_template_form_view_inherit_lot_compliance" model="ir.ui.view">
+            <field name="name">product.template.form.inherit.lot.compliance</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="dw_quality_control.view_template_property_form_inherit"/>
+            <field name="arch" type="xml">
+
+                <field name="auto_qc_gen" position="after">
+                    <field name="requires_lot_compliance_check"/>
+                </field>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

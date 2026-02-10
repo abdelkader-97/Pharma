@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="dw_view_warehouse_reanalyze_quality_form_inherit" model="ir.ui.view">
+            <field name="name">stock.warehouse.reanalyze.quality.inherit</field>
+            <field name="model">stock.warehouse</field>
+            <field name="inherit_id" ref="dw_quality_control.dw_view_warehouse_quality_form_inherit"/>
+            <field name="arch" type="xml">
+                <field name="dw_quality_operation_id" position="after">
+                    <field name="quality_reanalyze_op_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record id="check_quality_form" model="ir.ui.view">
+        <field name="name">quality.check.form</field>
+        <field name="model">dw.quality.check</field>
+        <field name="inherit_id" ref="dw_quality.quality_check_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group[2]" position="after">
+                <group>
+                    <field name="check_lot_compliance"/>
+                </group>
+            </xpath>
+            <xpath expr="//header/button[@name='do_fail'][1]" position="attributes">
+                <attribute name="invisible">quality_state != 'none' or check_lot_compliance == True</attribute>
+            </xpath>
+
+            <xpath expr="//header/button[@name='do_fail'][2]" position="attributes">
+                <attribute name="invisible">quality_state != 'pass' or check_lot_compliance == True</attribute>
+            </xpath>
+            <xpath expr="//header/button[@name='do_pass'][1]" position="attributes">
+                <attribute name="invisible">quality_state != 'none' or check_lot_compliance == True</attribute>
+            </xpath>
+
+            <xpath expr="//header/button[@name='do_pass'][2]" position="attributes">
+                <attribute name="invisible">quality_state != 'fail' or check_lot_compliance == True</attribute>
+            </xpath>
+            <xpath expr="//header" position="inside">
+                <button name="do_fail_process" type="object" class="btn-primary"
+                        invisible="check_lot_compliance == False or quality_state =='fail' " string="Fail"
+                        data-hotkey="q"/>
+                <button name="do_pass_process" type="object" class="btn-primary"
+                        invisible="check_lot_compliance == False or quality_state =='pass' " string="Pass"
+                        data-hotkey="q"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="check_quality_form2" model="ir.ui.view">
+        <field name="name">quality.check.form</field>
+        <field name="model">dw.quality.check</field>
+        <field name="inherit_id" ref="dw_quality_control.quality_check_view_form_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='location_id']" position="after">
+                <field name="initial_qty"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

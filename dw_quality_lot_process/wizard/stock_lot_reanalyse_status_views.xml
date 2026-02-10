@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_stock_lot_reanalyse_wizard_form" model="ir.ui.view">
+        <field name="name">stock.lot.reanalyse.wizard.form</field>
+        <field name="model">stock.lot.reanalyse.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Reanalyse Stock Lot">
+                <group>
+                    <field name="lot_id" required="1"/>
+                    <field name="company_id" required="1"/>
+                    <field name="reason_id" required="0"/>
+                    <field name="note"/>
+
+                </group>
+                <notebook>
+                    <page string="Lines">
+                        <field name="line_ids" nolabel="1">
+                            <list>
+                                <field name="location_id" readonly="1"/>
+                                <field name="quantity" readonly="1"/>
+                                <field name="uom_id" readonly="1"/>
+                                <field name="company_id" invisible="1"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+                <footer>
+                    <button name="confirm" type="object" string="Confirm" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
+
+

@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2018-2019 ForgeFlow, S.L.
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0) -->
+<odoo>
+
+    <record id="view_product_request_tree" model="ir.ui.view">
+        <field name="name">product.request.tree</field>
+        <field name="model">product.request</field>
+        <field name="arch" type="xml">
+            <list decoration-bf="message_needaction==True" decoration-info="state in ('draft')"
+                  decoration-muted="state in ('rejected')" string="Purchase Request">
+                <field name="message_needaction" invisible="1"/>
+                <field name="name"/>
+                <field name="date_start"/>
+                <field name="requested_by"/>
+                <field name="project"/>
+                <field name="company_id" groups="base.group_multi_company" widget="selection"/>
+                <!--                <field name="validation_comment"/>-->
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_product_request_form" model="ir.ui.view">
+        <field name="name">product.request.form</field>
+        <field name="model">product.request</field>
+        <field name="arch" type="xml">
+            <form string="Product Request">
+                <header>
+                    <button name="action_create_picking_request" string="Launch picking" invisible="state != 'draft'"
+                            type="object" class="oe_highlight"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done,rejected"
+                           statusbar_colors='{"approved":"blue"}'/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_pickings" type="object" class="oe_stat_button" string="Picking(s)"
+                                icon="fa-files-o" invisible="state == 'done'"/>
+                    </div>
+                    <div class="oe_edit_only">
+                        <label for="name" class="oe_inline"/>
+                    </div>
+                    <h1>
+                        <field name="is_editable" invisible="1"/>
+                        <field name="name" class="oe_inline"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="requested_by" readonly="is_editable == False"/>
+                            <field name="assigned_to"/>
+                        </group>
+                        <group>
+                            <field name="project" readonly="is_editable == False"/>
+                            <field name="company_id" groups="base.group_multi_company" widget="selection"
+                                   readonly="is_editable == False"/>
+                        </group>
+                        <group>
+                            <field name="date_start" readonly="is_editable == False"/>
+                            <field name="desired_date" readonly="is_editable == False"/>
+                            <field name="latest_date" readonly="is_editable == False"/>
+                        </group>
+                        <group>
+                            <field name="description" readonly="is_editable == False"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Products">
+                            <field name="line_ids">
+                                <list decoration-muted="cancelled == True" editable="bottom">
+                                    <field name="product_id"/>
+                                    <field name="name"/>
+                                    <field name="description" string="Specification"/>
+                                    <field name="product_production_qty" readonly="1" force_save="1"/>
+                                    <field name="product_qty"/>
+                                    <field name="product_uom_id" groups="uom.group_uom"/>
+                                    <field name="date_required"/>
+                                    <field name="estimated_cost" widget="monetary"/>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="company_id" groups="base.group_multi_company" widget="selection"/>
+                                    <field name="cancelled" invisible="1"/>
+                                    <field name="is_editable" invisible="1"/>
+                                    <field name="justification"/>
+                                </list>
+                                <form>
+                                    <sheet>
+                                        <group name="main">
+                                            <group>
+                                                <field name="is_editable" invisible="1"/>
+                                                <field name="name" readonly="is_editable == False"/>
+                                                <label for="product_qty"
+                                                       readonly="is_editable == False"/>
+                                                <div>
+                                                    <field name="product_qty" class="oe_inline"
+                                                           readonly="is_editable == False"/>
+                                                    <field name="product_uom_id" groups="uom.group_uom"
+                                                           class="oe_inline"
+                                                           readonly="is_editable == False"/>
+                                                </div>
+                                                <field name="date_required"
+                                                       readonly="is_editable == False"/>
+                                                <field name="estimated_cost" widget="monetary"
+                                                       readonly="is_editable == False"/>
+                                                <field name="currency_id" invisible="1"/>
+                                                <field name="cancelled"/>
+                                            </group>
+                                        </group>
+                                        <group name="justification">
+                                            <separator string="Justification"/>
+                                            <newline/>
+                                            <field name="justification" nolabel="1"
+                                                   readonly="is_editable == False"/>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_product_request_search" model="ir.ui.view">
+        <field name="name">product.request.list.select</field>
+        <field name="model">product.request</field>
+        <field name="arch" type="xml">
+            <search string="Search Purchase Request">
+                <field name="name" string="Purchase Request"/>
+                <separator/>
+                <field name="state"/>
+                <filter name="unassigned" string="Unassigned" domain="[('assigned_to','=', False)]"
+                        help="Unassigned Request"/>
+                <filter name="state_draft" string="Draft" domain="[('state','=','draft')]"
+                        help="Request is to be approved"/>
+                <filter name="state_to_approve" string="To Approve" domain="[('state','=','to_approve')]"
+                        help="Request is to be approved"/>
+                <filter name="state_approved" string="Approved" domain="[('state','=','approved')]"
+                        help="Request is approved"/>
+                <filter name="state_rejected" string="Rejected" domain="[('state','=','rejected')]"
+                        help="Request is rejected"/>
+                <filter name="state_done" string="Done" domain="[('state','=','done')]" help="Request is done"/>
+                <filter string="Unread Messages" name="message_needaction" domain="[('message_needaction','=',True)]"/>
+                <filter name="assigned_to_me" domain="[('assigned_to','=', uid)]" help="Assigned to me"/>
+                <filter name="my_requests" domain="[('requested_by','=', uid)]" help="My requests"/>
+                <field name="requested_by"/>
+                <field name="assigned_to"/>
+                <filter name="request_status" domain="[('request_status','=', 'not_available')]"/>
+                <group expand="0" string="Group By...">
+                    <filter name="requested_by" string="Requested by" icon="fa-user" domain="[]"
+                            context="{'group_by':'requested_by'}"/>
+
+                    <filter name="assigned_to" string="Assigned to" icon="fa-user" domain="[]"
+                            context="{'group_by':'assigned_to'}"/>
+                    <filter name="source" string="Source" icon="fa-caret-square-o-left" domain="[]"/>
+                    <filter name="start_date" string="Start Date" icon="fa-calendar" domain="[]"
+                            context="{'group_by':'date_start'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="product_request_report_view_graph" model="ir.ui.view">
+        <field name="name">product.request.graph</field>
+        <field name="model">product.request</field>
+        <field name="arch" type="xml">
+            <graph string="Purchase Request Analysis" sample="1">
+                <field name="state"/>
+                <field name="date_start" interval="month"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="product_request_report_view_pivot" model="ir.ui.view">
+        <field name="name">product.request.pivot</field>
+        <field name="model">product.request</field>
+        <field name="arch" type="xml">
+            <pivot string="Purchase Request Analysis" sample="1">
+                <field name="state" type="col"/>
+                <!--                <field name="validation_comment" type="row"/>-->
+            </pivot>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="Action_product_request">
+        <field name="name">Product request</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.request</field>
+        <field name="view_mode">list,form,graph,pivot</field>
+        <field name="context">{"search_default_requested_by": uid,"search_default_request_status": 1}</field>
+        <field name="search_view_id" ref="view_product_request_search"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to start a new product request process.
+            </p>
+            <p>
+                A product request is an instruction to procure
+                a certain quantity of materials services, so that they are
+                available at a certain point in time.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="menu_product_request"
+            name="Product request"
+            action="dw_mrp_product_request.Action_product_request"
+            parent="mrp.menu_mrp_root"
+            groups="base.group_user"
+    />
+
+</odoo>

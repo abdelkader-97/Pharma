@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_product_pharmaceutical_family_form" model="ir.ui.view">
+        <field name="name">product.pharmaceutical.family</field>
+        <field name="model">product.pharmaceutical.family</field>
+        <field name="inherit_id" ref="dw_pharma_base.product_pharma_family_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tracking']" position="after">
+                <field name="auto_generate_lot_number" invisible="tracking != 'lot'" />
+                <field name="lot_code" invisible="not auto_generate_lot_number"/>
+                <field name="sequence_size" invisible="not auto_generate_lot_number"/>
+                <field name="product_ids" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

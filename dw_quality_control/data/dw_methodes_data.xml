@@ -1,0 +1,95 @@
+<odoo>
+    <data noupdate="1">
+
+        <!-- Appearance -->
+        <record id="dw_methode_aspect" model="dw.analyse.methode">
+            <field name="code">AP-001</field>
+            <field name="name">Appearance</field>
+            <field name="type">essai</field>
+            <field name="principle">Visual inspection under natural light.</field>
+            <field name="procedure">Take a small quantity of powder and observe on a white surface under natural light.</field>
+            <field name="specification">Amorphous powder, yellow-brown to red-brown.</field>
+        </record>
+
+        <!-- Solubility -->
+        <record id="dw_methode_solubility" model="dw.analyse.methode">
+            <field name="code">SOL-002</field>
+            <field name="name">Solubility</field>
+            <field name="type">essai</field>
+            <field name="principle">Test of solubility in various solvents.</field>
+            <field name="procedure">Dissolve 1 g in 10 mL of water, ethanol (96%) and acetone. Shake and observe.</field>
+            <field name="specification">Water: soluble, Ethanol: soluble, Acetone: practically insoluble.</field>
+        </record>
+
+        <!-- IR Spectroscopy -->
+        <record id="dw_methode_ir" model="dw.analyse.methode">
+            <field name="code">IR-003</field>
+            <field name="name">Identification by IR</field>
+            <field name="type">identification</field>
+            <field name="principle">Infrared spectroscopy comparison with reference spectrum.</field>
+            <field name="procedure">Prepare KBr disc and record IR spectrum (4000 to 400 cm⁻¹). Compare to reference spectrum.</field>
+            <field name="specification">Spectra must match.</field>
+        </record>
+
+        <!-- Starch Reaction -->
+        <record id="dw_methode_starch" model="dw.analyse.methode">
+            <field name="code">ST-004</field>
+            <field name="name">Identification by Starch Reaction</field>
+            <field name="type">identification</field>
+            <field name="principle">Chemical reaction with starch producing color.</field>
+            <field name="procedure">Add starch to sample solution and observe the color.</field>
+            <field name="specification">Intense blue color.</field>
+        </record>
+
+        <!-- pH -->
+        <record id="dw_methode_ph" model="dw.analyse.methode">
+            <field name="code">PH-005</field>
+            <field name="name">pH Measurement</field>
+            <field name="type">essai</field>
+            <field name="principle">Potentiometric pH measurement.</field>
+            <field name="procedure">Dissolve a precise amount in distilled water and measure with calibrated pH meter.</field>
+            <field name="specification">1.5 to 5.0</field>
+        </record>
+
+        <!-- Iodide Content -->
+        <record id="dw_methode_iodides" model="dw.analyse.methode">
+            <field name="code">IOD-006</field>
+            <field name="name">Iodide Content</field>
+            <field name="type">essai</field>
+            <field name="principle">Titration with silver nitrate.</field>
+            <field name="procedure">Dissolve sample in ethanolic mixture and titrate with AgNO₃.</field>
+            <field name="specification">≤ 6.0%</field>
+        </record>
+
+        <!-- Loss on Drying -->
+        <record id="dw_methode_loss_drying" model="dw.analyse.methode">
+            <field name="code">LOD-007</field>
+            <field name="name">Loss on Drying</field>
+            <field name="type">essai</field>
+            <field name="principle">Drying the sample at 105 °C.</field>
+            <field name="procedure">Weigh ~1g and dry in oven for 3 hours. Calculate mass loss.</field>
+            <field name="specification">≤ 8.0%</field>
+        </record>
+
+        <!-- Sulphated Ash -->
+        <record id="dw_methode_ash" model="dw.analyse.methode">
+            <field name="code">ASH-008</field>
+            <field name="name">Sulphated Ash</field>
+            <field name="type">essai</field>
+            <field name="principle">Calcination followed by sulphuric acid treatment.</field>
+            <field name="procedure">Weigh sample, calcine, add H₂SO₄, re-calcine and calculate residue.</field>
+            <field name="specification">≤ 0.1%</field>
+        </record>
+
+        <!-- Iodine Assay -->
+        <record id="dw_methode_iodine_assay" model="dw.analyse.methode">
+            <field name="code">IOD-009</field>
+            <field name="name">Iodine Assay</field>
+            <field name="type">dosage</field>
+            <field name="principle">Titration with sodium thiosulfate.</field>
+            <field name="procedure">Dissolve sample with KI and H₂SO₄. Titrate with Na₂S₂O₃. Calculate content.</field>
+            <field name="specification">9.0 to 12.0%</field>
+        </record>
+
+    </data>
+</odoo>

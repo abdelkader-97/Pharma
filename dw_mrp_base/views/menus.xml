@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="menu_dw_mrp_bom"
+              name="BOM form"
+              parent="mrp.menu_mrp_configuration"
+              action="dw_pharma_base.action_product_pharmaceutical_form"
+              sequence="50"/>
+
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="dw_view_mrp_bom_form_view_inherit" model="ir.ui.view">
+        <field name="name">mrp.bom.inherit.form</field>
+        <field name="model">mrp.bom</field>
+        <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+        <field name="arch" type="xml">
+
+            <field name="code" position="before">
+                <field name="dw_extrat_cost"/>
+                <field name="dw_form_id" options="{'no_create': True}"/>
+            </field>
+            <page name="miscellaneous" position="before">
+                <page string="BOM Configuration" name="bom_config">
+                    <group string="Production Configuraton" name="production_config">
+                        <field name="dw_force_mrp_config"/>
+                        <field name="dw_location_component_id"/>
+                        <field name="dw_location_dest_id"/>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>

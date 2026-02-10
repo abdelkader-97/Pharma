@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--********************************* Maintenance Task Tracking Wizard ******************************************-->
+
+    <!--    Form View    -->
+    <record id="mrp_workorder_tracking_wizard_view_form" model="ir.ui.view">
+        <field name="name">Mrp production workorder Tracking Wizard form</field>
+        <field name="model">mrp.workorder.tracking.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+<!--            <field name="is_first_step" invisible="1"/>-->
+<!--            <field name="is_last_step" invisible="1"/>-->
+            <div class="login-form-1 tracking-form" height="65%" style="min-height:65%;">
+                <!--                <button special="cancel" type="object" class="align-left btn-secondary" string="Back"-->
+                <!--                        style="background-color: #ffcc66;">-->
+                <!--                </button>-->
+                <div class="logo text-center">Workorder Tracking</div>
+                <div>
+                    <button class="btn btn-secondary back-button" accesskey="G" aria-keyshortcuts="Alt+Shift+G"
+                            style="position: relative;">
+                        <i class="fa fa-arrow-left"></i>
+                    </button>
+                </div>
+                <div id="login-form" class="text-center">
+                    <div class="main-login-form">
+                        <!--                        <button special="cancel" data-hotkey="z" string="Cancel" class="btn-secondary"/>-->
+                        <div class="login-group">
+                            <div class="form-group">
+                                <label for="emp_pin" style="display: block;"/>
+                                <field name="emp_pin" required="1"
+                                       options="{'hide_model': True, 'no_create': True, 'no_edit': True, 'no_open': True}"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="user_id" style="display: block;"/>
+                                <field name="user_id" required="1"
+                                       readonly="1"
+                                       options="{'hide_model': True, 'no_create': True, 'no_edit': True, 'no_open': True}"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="production_id" style="display: block;"/>
+                                <field name="production_ids" invisible="1"/>
+                                <field name="production_id"
+                                       domain="[('id','in',production_ids)]"
+                                       readonly="not user_id"
+                                       options="{'hide_model': True, 'no_create': True, 'no_edit': True, 'no_open': True}"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="workorder_id" style="display: block;"/>
+                                <field name="workorder_ids" invisible="1"/>
+                                <field name="workorder_id"
+                                       readonly="not production_id"
+                                       domain="[('id', 'in', workorder_ids), ('state', 'not in', ('done', 'cancel'))]"
+                                       options="{'hide_model': True, 'no_create': True, 'no_edit': True, 'no_open': True}"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="workcenter_id" style="display: block;"/>
+                                <field name="workcenter_id"
+                                       readonly="not workorder_id"
+                                       options="{'hide_model': True, 'no_create': True, 'no_edit': True, 'no_open': True}"/>
+                            </div>
+
+
+                            <field name="state" invisible="1"/>
+
+                            <div class="form-group">
+                                <field name="move_list_raw_ids">
+                                    <list default_order="is_done,sequence" editable="bottom" create="false"
+                                          delete="false" edit="false">
+                                        <field name="product_id" force_save="1" required="1"
+                                               context="{'default_type': 'product'}"
+                                        />
+                                        <!--                                        attrs="{'readonly': ['|', '|', ('has_move_lines', '=', True), ('state', '=', 'cancel'), '&amp;', ('state', '!=', 'draft'), ('additional', '=', False) ]}"-->
+
+                                        <field name="move_line_ids" invisible="1">
+                                            <list>
+                                                <field name="lot_id" invisible="1"/>
+                                                <field name="owner_id" invisible="1"/>
+                                                <field name="package_id" invisible="1"/>
+                                                <field name="result_package_id" invisible="1"/>
+                                                <field name="location_id" invisible="1"/>
+                                                <field name="qty_done" invisible="1"/>
+                                                <field name="product_id" invisible="1"/>
+                                                <field name="product_uom_id" invisible="1"/>
+                                                <field name="product_uom_qty" invisible="1"/>
+                                                <field name="state" invisible="1"/>
+                                                <field name="move_id" invisible="1"/>
+                                                <field name="id" invisible="1"/>
+                                            </list>
+                                        </field>
+
+                                        <field name="product_uom_category_id" invisible="1"/>
+                                        <field name="name" invisible="1"/>
+                                        <field name="allowed_operation_ids" invisible="1"/>
+                                        <field name="unit_factor" invisible="1"/>
+                                        <field name="date" invisible="1"/>
+                                        <field name="additional" invisible="1"/>
+                                        <field name="has_tracking" invisible="1"/>
+                                        <field name="operation_id" invisible="1"/>
+                                        <field name="is_done" invisible="1"/>
+                                        <field name="bom_line_id" invisible="1"/>
+                                        <field name="sequence" invisible="1"/>
+                                        <field name="location_id" invisible="1"/>
+                                        <field name="warehouse_id" invisible="1"/>
+                                        <field name="has_move_lines" invisible="1"/>
+                                        <field name="state" invisible="1" force_save="1"/>
+                                        <field name="should_consume_qty" invisible="1"/>
+                                        <field name="product_uom_qty" readonly="1" widget="mrp_should_consume"
+                                               string="To Consume" width="1"/>
+                                        <field name="product_type" invisible="1"/>
+                                        <field name="product_qty" invisible="1" readonly="1"/>
+                                        <field name="reserved_availability" invisible="1"/>
+                                        <field name="forecast_expected_date" invisible="1"/>
+
+                                        <field name="is_quantity_done_editable" invisible="1"/>
+                                        <field name="quantity_done" string="Consumed" readonly="1"
+                                               decoration-success="not is_done and (quantity_done - should_consume_qty == 0)"
+                                               decoration-warning="not is_done and (quantity_done - should_consume_qty &gt; 0.0001)"
+                                        />
+                                        <field name="product_uom"
+                                               readonly="state != 'draft'"
+                                               options="{'no_open': True, 'no_create': True}" groups="uom.group_uom"/>
+                                        <field name="show_details_visible" invisible="1"/>
+
+                                        <field name="group_id" invisible="1"/>
+                                        <button name="action_show_details" type="object" icon="fa-list"
+                                                context="{'default_product_uom_qty': 0}"
+                                                invisible="not show_details_visible"
+                                                options="{&quot;warn&quot;: true}"/>
+                                    </list>
+                                </field>
+                            </div>
+                            <div class="form-group workorder_pdf">
+                                <field name="worksheet_type" invisible="1"/>
+                                <field name="worksheet" widget="pdf_viewer"/>
+                                <!--                attrs="{'invisible': ['|', ('worksheet_type', '=', 'google_slide'), '&amp;', ('is_last_step', '=', True), ('is_first_step', '=', False)]}"-->
+                                <field name="worksheet_google_slide" widget="mrp_embed_viewer_no_reload"/>
+                                <!--                                attrs="{'invisible': ['|', ('worksheet_type', '=', 'pdf'), '&amp;', ('is_last_step', '=', True), ('is_first_step', '=', False)]}"-->
+                            </div>
+                        </div>
+
+                        <field name="production_state" invisible="1"/>
+                        <field name="working_state" invisible="1"/>
+                        <field name="is_user_working" invisible="1"/>
+                        <field name="state_workorder" invisible="1"/>
+
+
+                        <!--                        <button name="button_start" type="object" string="Start" class="btn-success"-->
+                        <!--                                attrs="{'invisible': ['|', '|', '|', '|', ('production_state','in', ('draft', 'done', 'cancel')), ('working_state', '=', 'blocked'), ('state_workorder', '=', 'done'), ('is_user_working', '!=', False), ('workorder_id', '=', False)]}"/>-->
+                        <!--                        <button name="button_pending" type="object" string="Pause" class="btn-warning"/>-->
+                        <!--                         attrs="{'invisible': ['|', '|', ('production_state', 'in', ('draft', 'done', 'cancel')), ('working_state', '=', 'blocked'), ('is_user_working', '=', False)]}"-->
+                        <!--                        <button name="button_finish" type="object" string="Done" class="btn-success"-->
+                        <!--                                attrs="{'invisible': ['|', '|', ('production_state', 'in', ('draft', 'done', 'cancel')), ('working_state', '=', 'blocked'), ('is_user_working', '=', False)]}"/>-->
+                        <!--                        <button name="%(mrp.act_mrp_block_workcenter_wo)d" type="action" string="Block"-->
+                        <!--                                context="{'default_workcenter_id': workcenter_id}" class="btn-danger"-->
+                        <!--                                attrs="{'invisible': ['|', '|', ('production_state', 'in', ('draft', 'done', 'cancel')), ('working_state', '=', 'blocked'), ('workorder_id', '=', False)]}"/>-->
+                        <!--                        <button name="button_unblock" type="object" string="Unblock"-->
+                        <!--                                context="{'default_workcenter_id': workcenter_id}" class="btn-danger"-->
+                        <!--                                attrs="{'invisible': ['|', ('production_state', 'in', ('draft', 'done', 'cancel')), ('working_state', '!=', 'blocked')]}"/>-->
+
+
+                    </div>
+                    <field name="workorder_state" invisible="1"/>
+                    <div class="etc-login-form">
+                        <p>Please fill the above fields then click on the button</p>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>

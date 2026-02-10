@@ -1,0 +1,47 @@
+<odoo>
+    <record id="view_dw_analyse_report_tree" model="ir.ui.view">
+        <field name="name">Analyse Report Tree</field>
+        <field name="model">dw.analyse.report</field>
+        <field name="arch" type="xml">
+            <list string="Analyse Report">
+                <field name="name"/>
+                <field name="product_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_dw_analyse_report_form" model="ir.ui.view">
+        <field name="name">Analyse Report Form</field>
+        <field name="model">dw.analyse.report</field>
+        <field name="arch" type="xml">
+            <form string="Analyse Report">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="product_id"/>
+                            <field name="test_id"/>
+                            <field name="methode_ids" widget="many2many_tags"/>
+                            <field name="norm_id"/>
+                        </group>
+                        <group>
+                            <field name="company_id"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="action_dw_analyse_report" model="ir.actions.act_window">
+        <field name="name">Analyse Report</field>
+        <field name="res_model">dw.analyse.report</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem
+            id="menu_quality_config_dw_analyse_report"
+            name="Analyse Report"
+            action="action_dw_analyse_report"
+            parent="dw_quality.menu_quality_configuration"
+            sequence="40"/>
+</odoo>
